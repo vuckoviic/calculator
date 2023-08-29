@@ -23,5 +23,16 @@ let operator = "";
 let num2 = 0;
 
 const operate = function(num1, opeator, num2){
-    
+
 }
+
+const displayValue = document.getElementById('display-value');
+
+const numberButtons = document.querySelectorAll('.number');
+
+numberButtons.forEach(function(numberButton) {
+    numberButton.addEventListener('click', function() {
+        displayValue.textContent = "1";
+        console.log("a");
+});
+});
