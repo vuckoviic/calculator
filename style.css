@@ -1,5 +1,7 @@
 .calculator-body{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 500px;
     width: 300px;
     border: 1px solid black;
@@ -11,4 +13,46 @@ body{
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-color: rgb(255, 189, 65);
+}
+
+.display{
+    display: flex;
+    height: 70px;
+    width: 280px;
+    border: 1px solid black;
+    margin-top: 10px;
+}
+
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 150px;
+}
+
+button{
+    display: flex;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+#equals{
+    display: flex;
+    width: 130px;
+    border-radius: 25px;
+}
+
+#zero-point-equals{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 30px;
 }
