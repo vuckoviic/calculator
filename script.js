@@ -41,35 +41,80 @@ const number8 = document.getElementById('number8');
 const number9 = document.getElementById('number9');
 const number0 = document.getElementById('number0');
 
+if (displayValue.textContent.length > 1) {
+    displayValue.textContent = displayValue.textContent.substring(1);
+}
+
+
 number1.addEventListener('click', function() {
-    displayValue.textContent += "1";
+    if (displayValue.textContent === "0") {
+        displayValue.textContent = "1";
+    } else {
+        displayValue.textContent += "1";
+    }
 });
 number2.addEventListener('click', function() {
-    displayValue.textContent += "2";
+    if (displayValue.textContent === "0") {
+        displayValue.textContent = "2";
+    } else {
+        displayValue.textContent += "2";
+    }
 });
 number3.addEventListener('click', function() {
-    displayValue.textContent += "3";
+    if (displayValue.textContent === "0") {
+        displayValue.textContent = "3";
+    } else {
+        displayValue.textContent += "3";
+    }
 });
 number4.addEventListener('click', function() {
-    displayValue.textContent += "4";
+    if (displayValue.textContent === "0") {
+        displayValue.textContent = "4";
+    } else {
+        displayValue.textContent += "4";
+    }
 });
 number5.addEventListener('click', function() {
-    displayValue.textContent += "5";
+    if (displayValue.textContent === "0") {
+        displayValue.textContent = "5";
+    } else {
+        displayValue.textContent += "5";
+    }
 });
 number6.addEventListener('click', function() {
-    displayValue.textContent += "6";
+    if (displayValue.textContent === "0") {
+        displayValue.textContent = "6";
+    } else {
+        displayValue.textContent += "6";
+    }
 });
 number7.addEventListener('click', function() {
-    displayValue.textContent += "7";
+    if (displayValue.textContent === "0") {
+        displayValue.textContent = "7";
+    } else {
+        displayValue.textContent += "7";
+    }
 });
 number8.addEventListener('click', function() {
-    displayValue.textContent += "8";
+    if (displayValue.textContent === "0") {
+        displayValue.textContent = "8";
+    } else {
+        displayValue.textContent += "8";
+    }
 });
 number9.addEventListener('click', function() {
-    displayValue.textContent += "9";
+    if (displayValue.textContent === "0") {
+        displayValue.textContent = "9";
+    } else {
+        displayValue.textContent += "9";
+    }
 });
 number0.addEventListener('click', function() {
-    displayValue.textContent += "0";
+     if (displayValue.textContent === "0") {
+        displayValue.textContent = "0";
+    } else {
+        displayValue.textContent += "0";
+    }
 });
 
 const plus = document.getElementById('plus');
@@ -78,4 +123,4 @@ const x = document.getElementById('x');
 const divider = document.getElementById('divide');
 const remainderr = document.getElementById('remainder'); //because divide and remainder are already declared as functions above
 const AC = document.getElementById('AC');
-const C = document.getElementById('C'); 
+const C = document.getElementById('C');
