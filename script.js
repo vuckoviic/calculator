@@ -41,11 +41,6 @@ const number8 = document.getElementById('number8');
 const number9 = document.getElementById('number9');
 const number0 = document.getElementById('number0');
 
-if (displayValue.textContent.length > 1) {
-    displayValue.textContent = displayValue.textContent.substring(1);
-}
-
-
 number1.addEventListener('click', function() {
     if (displayValue.textContent === "0") {
         displayValue.textContent = "1";
@@ -131,6 +126,14 @@ AC.addEventListener('click', () => {
     num2 = 0;
     operator = "";
     displayValue.textContent = "0";
+});
+
+C.addEventListener('click', () => {
+    // Remove the last character and update displayValue
+    displayValue.textContent = displayValue.textContent.slice(0, -1);
+    if (displayValue.textContent === "") {
+        displayValue.textContent = "0";
+    }
 });
 
 
