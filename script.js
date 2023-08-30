@@ -72,3 +72,10 @@ number0.addEventListener('click', function() {
     displayValue.textContent += "0";
 });
 
+const plus = document.getElementById('plus');
+const minus = document.getElementById('minus');
+const x = document.getElementById('x');
+const divider = document.getElementById('divide');
+const remainderr = document.getElementById('remainder'); //because divide and remainder are already declared as functions above
+const AC = document.getElementById('AC');
+const C = document.getElementById('C'); 
