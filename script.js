@@ -41,7 +41,6 @@ const operate = function(num1, operator, num2){
     else if (operator == "%"){
         return remainder(num1, num2);
     }
-
 }
 
 const displayValue = document.getElementById('display-value');
@@ -170,7 +169,7 @@ number9.addEventListener('click', function() {
     }
 });
 number0.addEventListener('click', function() {
-    if (num2Check === true) {
+    if (num2Check === true) {   
         num2 = displayValue.textContent;
     } else {
         num1 = displayValue.textContent;
