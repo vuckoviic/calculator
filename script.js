@@ -124,3 +124,19 @@ const divider = document.getElementById('divide');
 const remainderr = document.getElementById('remainder'); //because divide and remainder are already declared as functions above
 const AC = document.getElementById('AC');
 const C = document.getElementById('C');
+
+
+AC.addEventListener('click', () => {
+    num1 = 0;
+    num2 = 0;
+    operator = "";
+    displayValue.textContent = "0";
+});
+
+
+plus.addEventListener('click', () => {
+    num1 = displayValue;
+    operator = "+";
+    displayValue.textContent += "+";
+
+});
