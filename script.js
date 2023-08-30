@@ -1,21 +1,21 @@
-const add = function(a, b) {
-    return a + b;
+const add = function(num1, num2) {
+    return num1 + num2;
 };
   
-const subtract = function(a, b) {
-  return a - b;
+const subtract = function(num1, num2) {
+  return num1 - num2;
 };
 
-const multiply = function(a, b) {
-    return a * b;
+const multiply = function(num1, num2) {
+    return num1 * num2;
 }
 
-const divide = function(a, b){
-    return a / b;
+const divide = function(num1, num2){
+    return num1 / num2;;
 }
 
-const remainder = function(a, b){
-    return a % b;
+const remainder = function(num1, num2){
+    return num1 % num2;
 }
 
 let num1 = 0;
@@ -59,10 +59,14 @@ const number8 = document.getElementById('number8');
 const number9 = document.getElementById('number9');
 const number0 = document.getElementById('number0');
 
-const num2Check = false;
-
+let num2Check = false;
 
 number1.addEventListener('click', function() {
+    if (num2Check === true) {
+        num2 = displayValue.textContent;
+    } else {
+        num1 = displayValue.textContent;
+    }
     if (displayValue.textContent === "0") {
         displayValue.textContent = "1";
     } else {
@@ -70,6 +74,11 @@ number1.addEventListener('click', function() {
     }
 });
 number2.addEventListener('click', function() {
+    if (num2Check === true) {
+        num2 = displayValue.textContent;
+    } else {
+        num1 = displayValue.textContent;
+    }
     if (displayValue.textContent === "0") {
         displayValue.textContent = "2";
     } else {
@@ -77,6 +86,11 @@ number2.addEventListener('click', function() {
     }
 });
 number3.addEventListener('click', function() {
+    if (num2Check === true) {
+        num2 = displayValue.textContent;
+    } else {
+        num1 = displayValue.textContent;
+    }
     if (displayValue.textContent === "0") {
         displayValue.textContent = "3";
     } else {
@@ -84,6 +98,11 @@ number3.addEventListener('click', function() {
     }
 });
 number4.addEventListener('click', function() {
+    if (num2Check === true) {
+        num2 = displayValue.textContent;
+    } else {
+        num1 = displayValue.textContent;
+    }
     if (displayValue.textContent === "0") {
         displayValue.textContent = "4";
     } else {
@@ -91,6 +110,11 @@ number4.addEventListener('click', function() {
     }
 });
 number5.addEventListener('click', function() {
+    if (num2Check === true) {
+        num2 = displayValue.textContent;
+    } else {
+        num1 = displayValue.textContent;
+    }
     if (displayValue.textContent === "0") {
         displayValue.textContent = "5";
     } else {
@@ -98,6 +122,11 @@ number5.addEventListener('click', function() {
     }
 });
 number6.addEventListener('click', function() {
+    if (num2Check === true) {
+        num2 = displayValue.textContent;
+    } else {
+        num1 = displayValue.textContent;
+    }
     if (displayValue.textContent === "0") {
         displayValue.textContent = "6";
     } else {
@@ -105,6 +134,11 @@ number6.addEventListener('click', function() {
     }
 });
 number7.addEventListener('click', function() {
+    if (num2Check === true) {
+        num2 = displayValue.textContent;
+    } else {
+        num1 = displayValue.textContent;
+    }
     if (displayValue.textContent === "0") {
         displayValue.textContent = "7";
     } else {
@@ -112,6 +146,11 @@ number7.addEventListener('click', function() {
     }
 });
 number8.addEventListener('click', function() {
+    if (num2Check === true) {
+        num2 = displayValue.textContent;
+    } else {
+        num1 = displayValue.textContent;
+    }
     if (displayValue.textContent === "0") {
         displayValue.textContent = "8";
     } else {
@@ -119,6 +158,11 @@ number8.addEventListener('click', function() {
     }
 });
 number9.addEventListener('click', function() {
+    if (num2Check === true) {
+        num2 = displayValue.textContent;
+    } else {
+        num1 = displayValue.textContent;
+    }
     if (displayValue.textContent === "0") {
         displayValue.textContent = "9";
     } else {
@@ -126,6 +170,11 @@ number9.addEventListener('click', function() {
     }
 });
 number0.addEventListener('click', function() {
+    if (num2Check === true) {
+        num2 = displayValue.textContent;
+    } else {
+        num1 = displayValue.textContent;
+    }
      if (displayValue.textContent === "0") {
         displayValue.textContent = "0";
     } else {
@@ -159,38 +208,41 @@ C.addEventListener('click', () => {
 });
 
 plus.addEventListener('click', () => {
-    num1 = displayValue;
+    num1 = displayValue.textContent;;
     operator = "+";
     displayValue.textContent += " + ";
     num2Check = true;
 });
 
 minus.addEventListener('click', () => {
-    num1 = displayValue;
+    num1 = displayValue.textContent;;
     operator = "-";
     displayValue.textContent += " - ";
     num2Check = true;
 });
 
 x.addEventListener('click', () => {
-    num1 = displayValue;
+    num1 = displayValue.textContent;;
     operator = "x";
     displayValue.textContent += " × ";
     num2Check = true;
 });
 
 divider.addEventListener('click', () => {
-    num1 = displayValue;
+    num1 = displayValue.textContent;;
     operator = "/";
     displayValue.textContent += " ÷ ";
     num2Check = true;
 });
 
 remainderr.addEventListener('click', () => {
-    num1 = displayValue;
+    num1 = displayValue.textContent;;
     operator = "%";
     displayValue.textContent += " % ";
     num2Check = true;
 });
 
-equals.addEventListener('click', operate());
+equals.addEventListener('click', () => {
+    console.log(num1);
+    console.log(num2);
+});
