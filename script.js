@@ -139,34 +139,34 @@ C.addEventListener('click', () => {
 plus.addEventListener('click', () => {
     num1 = displayValue;
     operator = "+";
-    displayValue.textContent += "+";
+    displayValue.textContent += " + ";
     displayValue = num2;
 });
 
 minus.addEventListener('click', () => {
     num1 = displayValue;
     operator = "-";
-    displayValue.textContent += "-";
+    displayValue.textContent += " - ";
     displayValue = num2;
 });
 
 x.addEventListener('click', () => {
     num1 = displayValue;
     operator = "x";
-    displayValue.textContent += "x";
+    displayValue.textContent += " × ";
     displayValue = num2;
 });
 
 divider.addEventListener('click', () => {
     num1 = displayValue;
     operator = "/";
-    displayValue.textContent += "/";
+    displayValue.textContent += " ÷ ";
     displayValue = num2;
 });
 
 remainderr.addEventListener('click', () => {
     num1 = displayValue;
     operator = "%";
-    displayValue.textContent += "%";
+    displayValue.textContent += " % ";
     displayValue = num2;
 });
