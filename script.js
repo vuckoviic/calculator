@@ -22,7 +22,25 @@ let num1 = 0;
 let operator = "";
 let num2 = 0;
 
-const operate = function(num1, opeator, num2){
+const operate = function(num1, operator, num2){
+    if (operator == "+"){
+        return add(num1, num2);
+    }
+    else if (operator == "-"){
+        return subtract(num1, num2);
+    }
+    
+    else if (operator == "x"){
+        return multiply(num1, num2);
+    }
+    
+    else if (operator == "/"){
+        return divide(num1, num2);
+    }
+    
+    else if (operator == "%"){
+        return remainder(num1, num2);
+    }
 
 }
 
@@ -40,6 +58,9 @@ const number7 = document.getElementById('number7');
 const number8 = document.getElementById('number8');
 const number9 = document.getElementById('number9');
 const number0 = document.getElementById('number0');
+
+const num2Check = false;
+
 
 number1.addEventListener('click', function() {
     if (displayValue.textContent === "0") {
@@ -119,6 +140,7 @@ const divider = document.getElementById('divide');
 const remainderr = document.getElementById('remainder'); //because divide and remainder are already declared as functions above
 const AC = document.getElementById('AC');
 const C = document.getElementById('C');
+const equals = document.getElementById('equals');
 
 
 AC.addEventListener('click', () => {
@@ -140,33 +162,35 @@ plus.addEventListener('click', () => {
     num1 = displayValue;
     operator = "+";
     displayValue.textContent += " + ";
-    displayValue = num2;
+    num2Check = true;
 });
 
 minus.addEventListener('click', () => {
     num1 = displayValue;
     operator = "-";
     displayValue.textContent += " - ";
-    displayValue = num2;
+    num2Check = true;
 });
 
 x.addEventListener('click', () => {
     num1 = displayValue;
     operator = "x";
     displayValue.textContent += " × ";
-    displayValue = num2;
+    num2Check = true;
 });
 
 divider.addEventListener('click', () => {
     num1 = displayValue;
     operator = "/";
     displayValue.textContent += " ÷ ";
-    displayValue = num2;
+    num2Check = true;
 });
 
 remainderr.addEventListener('click', () => {
     num1 = displayValue;
     operator = "%";
     displayValue.textContent += " % ";
-    displayValue = num2;
+    num2Check = true;
 });
+
+equals.addEventListener('click', operate());
