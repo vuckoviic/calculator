@@ -75,3 +75,7 @@ button{
     background-color: rgb(254, 255, 169);
     color: rgb(255, 118, 68);
 }
+
+.operator-clicked{
+    display: flex;
+}
