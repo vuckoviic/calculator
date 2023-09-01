@@ -327,7 +327,13 @@ AC.addEventListener('click', () => {
 });
 
 plusMinus.addEventListener('click', () => {
-    
+    displayValue.textContent = `${"-"}${displayValue.textContent}`
+    if (displayValue.textContent == num1){
+        num1 = `${"-"}${num1}`;
+    }
+    else {
+        num2 = `${"-"}${num2}`;
+    }
 });
 
 plus.addEventListener('click', () => {
