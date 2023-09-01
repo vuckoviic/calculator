@@ -22,9 +22,11 @@ let num1 = 0;
 let operator = "";
 let num2 = 0;
 let num2Check = false;
+let operateCheck;
 
 const operate = function(num1, operator, num2){
-    
+    operateCheck = false;
+
     let num1Num = Number(num1);
     let num2Num = Number(num2);
 
@@ -51,7 +53,8 @@ const operate = function(num1, operator, num2){
     }
     console.log(result);
     displayValue.textContent = result;
-    return result; 
+    return result;
+    operateCheck = true;
 }
 
 const displayValue = document.getElementById('display-value');
@@ -70,6 +73,9 @@ const number9 = document.getElementById('number9');
 const number0 = document.getElementById('number0');
 
 number1.addEventListener('click', function() {
+    if (operateCheck === true){
+        num1 = result;
+    }
     if (num2Check === true && clearDisplay === true) {
         num2 = "1";
         displayValue.textContent = "1";
@@ -91,6 +97,9 @@ number1.addEventListener('click', function() {
 });
 
 number2.addEventListener('click', function() {
+    if (operateCheck === true){
+        num1 = result;
+    }
     if (num2Check === true && clearDisplay === true) {
         num2 = "2";
         displayValue.textContent = "2";
@@ -112,6 +121,9 @@ number2.addEventListener('click', function() {
 });
 
 number3.addEventListener('click', function() {
+    if (operateCheck === true){
+        num1 = result;
+    }
     if (num2Check === true && clearDisplay === true) {
         num2 = "3"; // Update num2 directly
         displayValue.textContent = "3";
@@ -132,6 +144,9 @@ number3.addEventListener('click', function() {
     }
 });
 number4.addEventListener('click', function() {
+    if (operateCheck === true){
+        num1 = result;
+    }
     if (num2Check === true && clearDisplay === true) {
         num2 = "4"; // Update num2 directly
         displayValue.textContent = "4";
@@ -152,6 +167,9 @@ number4.addEventListener('click', function() {
     }
 });
 number5.addEventListener('click', function() {
+    if (operateCheck === true){
+        num1 = result;
+    }
     if (num2Check === true && clearDisplay === true) {
         num2 = "5"; // Update num2 directly
         displayValue.textContent = "5";
@@ -172,6 +190,9 @@ number5.addEventListener('click', function() {
     }
 });
 number6.addEventListener('click', function() {
+    if (operateCheck === true){
+        num1 = result;
+    }
     if (num2Check === true && clearDisplay === true) {
         num2 = "6"; // Update num2 directly
         displayValue.textContent = "6";
@@ -192,6 +213,9 @@ number6.addEventListener('click', function() {
     }
 });
 number7.addEventListener('click', function() {
+    if (operateCheck === true){
+        num1 = result;
+    }
     if (num2Check === true && clearDisplay === true) {
         num2 = "7"; // Update num2 directly
         displayValue.textContent = "7";
@@ -212,6 +236,9 @@ number7.addEventListener('click', function() {
     }
 });
 number8.addEventListener('click', function() {
+    if (operateCheck === true){
+        num1 = result;
+    }
     if (num2Check === true && clearDisplay === true) {
         num2 = "8"; // Update num2 directly
         displayValue.textContent = "8";
@@ -232,6 +259,9 @@ number8.addEventListener('click', function() {
     }
 });
 number9.addEventListener('click', function() {
+    if (operateCheck === true){
+        num1 = result;
+    }
     if (num2Check === true && clearDisplay === true) {
         num2 = "9"; // Update num2 directly
         displayValue.textContent = "9";
@@ -252,6 +282,9 @@ number9.addEventListener('click', function() {
     }
 });
 number0.addEventListener('click', function() {
+    if (operateCheck === true){
+        num1 = result;
+    }
     if (num2Check === true && clearDisplay === true) {
         num2 = "0"; // Update num2 directly
         displayValue.textContent = "0";
