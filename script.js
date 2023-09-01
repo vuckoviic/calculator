@@ -24,27 +24,34 @@ let num2 = 0;
 let num2Check = false;
 
 const operate = function(num1, operator, num2){
+    
     let num1Num = Number(num1);
     let num2Num = Number(num2);
 
-    if (operator == "+"){
-        return add(num1, num2);
+    console.log(num1Num);
+    console.log(num2Num);
+
+    if (operator === "+"){
+        result = add(num1Num, num2Num);
     }
-    else if (operator == "-"){
-        return subtract(num1, num2);
-    }
-    
-    else if (operator == "x"){
-        return multiply(num1, num2);
-    }
-    
-    else if (operator == "/"){
-        return divide(num1, num2);
+    else if (operator === "-"){
+        result = subtract(num1Num, num2Num);
     }
     
-    else if (operator == "%"){
-        return remainder(num1, num2);
+    else if (operator === "x"){
+        result = multiply(num1Num, num2Num);
     }
+    
+    else if (operator === "/"){
+        result = divide(num1Num, num2Num);
+    }
+    
+    else if (operator === "%"){
+        result = remainder(num1Num, num2Num);
+    }
+    console.log(result);
+    displayValue.textContent = result;
+    return result; 
 }
 
 const displayValue = document.getElementById('display-value');
@@ -332,7 +339,6 @@ remainderr.addEventListener('click', () => {
     clearDisplay = true;
 });
 
-equals.addEventListener('click', () => {
-    console.log(num1);
-    console.log(num2);
+equals.addEventListener('click', function() {
+    operate(num1, operator, num2);
 });
