@@ -53,8 +53,9 @@ const operate = function(num1, operator, num2){
     }
     console.log(result);
     displayValue.textContent = result;
-    return result;
     operateCheck = true;
+    return result;
+    
 }
 
 const displayValue = document.getElementById('display-value');
@@ -320,6 +321,7 @@ let clearDisplay = false;
 
 AC.addEventListener('click', () => {
     num2Check = false;
+    operateCheck = false;
     num1 = 0;
     num2 = 0;
     operator = "";
@@ -327,13 +329,20 @@ AC.addEventListener('click', () => {
 });
 
 plusMinus.addEventListener('click', () => {
-    displayValue.textContent = `${"-"}${displayValue.textContent}`
-    if (displayValue.textContent == num1){
-        num1 = `${"-"}${num1}`;
+    if (displayValue.textContent !== "0"){
+        displayValue.textContent = `${"-"}${displayValue.textContent}`
+        if (displayValue.textContent == num1){
+            num1 = `${"-"}${num1}`;
+        }
+        else if (displayValue.textContent === "" || displayValue.textContent === "0"){
+            num1 = num1;
+            num2 = num2;
+        }
+        else{
+            num2 = `${"-"}${num2}`;
+        }
     }
-    else {
-        num2 = `${"-"}${num2}`;
-    }
+    
 });
 
 plus.addEventListener('click', () => {
