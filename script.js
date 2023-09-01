@@ -90,10 +90,17 @@ number1.addEventListener('click', function() {
             num1 += "1";
             displayValue.textContent += "1";
         }
-    } else if (num2Check === true) {
+    } 
+    else if (num2Check === true && displayValue.textContent === "0"){
+        num2 = "1";
+        displayValue.textContent = "1";
+    }
+    
+    else if (num2Check === true) {
         num2 += "1";
         displayValue.textContent += "1";
     }
+    
 });
 
 number2.addEventListener('click', function() {
