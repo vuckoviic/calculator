@@ -1,21 +1,21 @@
-const add = function(num1, num2) {
-    return num1 + num2;
+const add = function(num1Num, num2Num) {
+    return num1Num + num2Num;
 };
   
-const subtract = function(num1, num2) {
-  return num1 - num2;
+const subtract = function(num1Num, num2Num) {
+  return num1Num - num2Num;
 };
 
-const multiply = function(num1, num2) {
-    return num1 * num2;
+const multiply = function(num1Num, num2Num) {
+    return num1Num * num2Num;
 }
 
-const divide = function(num1, num2){
-    return num1 / num2;;
+const divide = function(num1Num, num2Num){
+    return num1Num / num2Num;
 }
 
-const remainder = function(num1, num2){
-    return num1 % num2;
+const remainder = function(num1Num, num2Num){
+    return num1Num % num2Num;
 }
 
 let num1 = 0;
@@ -24,6 +24,9 @@ let num2 = 0;
 let num2Check = false;
 
 const operate = function(num1, operator, num2){
+    let num1Num = Number(num1);
+    let num2Num = Number(num2);
+
     if (operator == "+"){
         return add(num1, num2);
     }
