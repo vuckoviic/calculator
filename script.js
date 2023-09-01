@@ -95,7 +95,6 @@ number1.addEventListener('click', function() {
         num2 = "1";
         displayValue.textContent = "1";
     }
-    
     else if (num2Check === true) {
         num2 += "1";
         displayValue.textContent += "1";
@@ -121,7 +120,13 @@ number2.addEventListener('click', function() {
             num1 += "2";
             displayValue.textContent += "2";
         }
-    } else if (num2Check === true) {
+
+    } 
+    else if (num2Check === true && displayValue.textContent === "0"){
+        num2 = "1";
+        displayValue.textContent = "1";
+    }
+    else if (num2Check === true) {
         num2 += "2";
         displayValue.textContent += "2";
     }
@@ -145,7 +150,13 @@ number3.addEventListener('click', function() {
             num1 += "3"; // Update num1 directly
             displayValue.textContent += "3";
         }
-    } else if (num2Check === true) {
+    }
+    
+    else if (num2Check === true && displayValue.textContent === "0"){
+        num2 = "1";
+        displayValue.textContent = "1";
+    }
+    else if (num2Check === true) {
         num2 += "3"; // Update num2 directly
         displayValue.textContent += "3";
     }
@@ -168,7 +179,14 @@ number4.addEventListener('click', function() {
             num1 += "4"; // Update num1 directly
             displayValue.textContent += "4";
         }
-    } else if (num2Check === true) {
+    }
+    
+    else if (num2Check === true && displayValue.textContent === "0"){
+        num2 = "1";
+        displayValue.textContent = "1";
+    }
+    
+    else if (num2Check === true) {
         num2 += "4"; // Update num2 directly
         displayValue.textContent += "4";
     }
@@ -191,7 +209,14 @@ number5.addEventListener('click', function() {
             num1 += "5"; // Update num1 directly
             displayValue.textContent += "5";
         }
-    } else if (num2Check === true) {
+    }
+    
+    else if (num2Check === true && displayValue.textContent === "0"){
+        num2 = "1";
+        displayValue.textContent = "1";
+    }
+    
+    else if (num2Check === true) {
         num2 += "5"; // Update num2 directly
         displayValue.textContent += "5";
     }
@@ -214,7 +239,14 @@ number6.addEventListener('click', function() {
             num1 += "6"; // Update num1 directly
             displayValue.textContent += "6";
         }
-    } else if (num2Check === true) {
+    }
+    
+    else if (num2Check === true && displayValue.textContent === "0"){
+        num2 = "1";
+        displayValue.textContent = "1";
+    }
+    
+    else if (num2Check === true) {
         num2 += "6"; // Update num2 directly
         displayValue.textContent += "6";
     }
@@ -237,7 +269,14 @@ number7.addEventListener('click', function() {
             num1 += "7"; // Update num1 directly
             displayValue.textContent += "7";
         }
-    } else if (num2Check === true) {
+    }
+    
+    else if (num2Check === true && displayValue.textContent === "0"){
+        num2 = "1";
+        displayValue.textContent = "1";
+    }
+    
+    else if (num2Check === true) {
         num2 += "7"; // Update num2 directly
         displayValue.textContent += "7";
     }
@@ -260,7 +299,14 @@ number8.addEventListener('click', function() {
             num1 += "8"; // Update num1 directly
             displayValue.textContent += "8";
         }
-    } else if (num2Check === true) {
+    }
+    
+    else if (num2Check === true && displayValue.textContent === "0"){
+        num2 = "1";
+        displayValue.textContent = "1";
+    }
+    
+    else if (num2Check === true) {
         num2 += "8"; // Update num2 directly
         displayValue.textContent += "8";
     }
@@ -283,7 +329,14 @@ number9.addEventListener('click', function() {
             num1 += "9"; // Update num1 directly
             displayValue.textContent += "9";
         }
-    } else if (num2Check === true) {
+    }
+    
+    else if (num2Check === true && displayValue.textContent === "0"){
+        num2 = "1";
+        displayValue.textContent = "1";
+    }
+    
+    else if (num2Check === true) {
         num2 += "9"; // Update num2 directly
         displayValue.textContent += "9";
     }
@@ -306,7 +359,13 @@ number0.addEventListener('click', function() {
             num1 += "0"; // Update num1 directly
             displayValue.textContent += "0";
         }
-    } else if (num2Check === true) {
+    }
+    
+    else if (num2Check === true && displayValue.textContent === "0"){
+        num2 = "1";
+        displayValue.textContent = "1";
+    }
+    else if (num2Check === true) {
         num2 += "0"; // Update num2 directly
         displayValue.textContent += "0";
     }
