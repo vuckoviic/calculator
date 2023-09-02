@@ -24,7 +24,15 @@ let num2 = 0;
 let num2Check = false;
 let operateCheck;
 
-const operate = function(num1, operator, num2){
+const operate = function(num1, operator, num2) {
+
+    if (displayValue.textContent === "0" && num2Check === false){
+        num1 = "0";
+    }
+    else if (displayValue.textContent === "0" && num2Check === true){
+        num2 = "0";
+    }
+
     operateCheck = false;
 
     let num1Num = Number(num1);
@@ -33,30 +41,32 @@ const operate = function(num1, operator, num2){
     console.log(num1Num);
     console.log(num2Num);
 
-    if (operator === "+"){
+    if (operator === "+") {
         result = add(num1Num, num2Num);
-    }
-    else if (operator === "-"){
+    } else if (operator === "-") {
         result = subtract(num1Num, num2Num);
-    }
-    
-    else if (operator === "x"){
+    } else if (operator === "x") {
         result = multiply(num1Num, num2Num);
-    }
-    
-    else if (operator === "/"){
-        result = divide(num1Num, num2Num);
-    }
-    
-    else if (operator === "%"){
+    } else if (operator === "/") {
+        if (num2Num === 0) {
+            result = "NaN"; // Handle division by zero by setting result to "NaN"
+        } else {
+            result = divide(num1Num, num2Num);
+        }
+    } else if (operator === "%") {
         result = remainder(num1Num, num2Num);
+    } else {
+        // Handle unsupported operators or other cases here
+        result = "NaN";
     }
+
     console.log(result);
     displayValue.textContent = result;
     operateCheck = true;
+    operatorCheck = false;
     return result;
-    
-}
+};
+
 
 const displayValue = document.getElementById('display-value');
 
@@ -73,16 +83,17 @@ const number8 = document.getElementById('number8');
 const number9 = document.getElementById('number9');
 const number0 = document.getElementById('number0');
 
-number1.addEventListener('click', function() {
-    if (operateCheck === true){
-        num1 = result;
+number1.addEventListener('click', function () {
+    if (operateCheck === true && operatorCheck === false) {
+        num1 = result; // Set num1 to the result if there's a result and no operator is clicked
+        operateCheck = false; // Clear the result
     }
-    if (num2Check === true && clearDisplay === true) {
+
+    if (num2Check === true && operatorCheck === true) {
         num2 = "1";
         displayValue.textContent = "1";
         clearDisplay = false;
-    } else if (num2Check === false) {
-        num1 = displayValue.textContent;
+    } else if (operatorCheck === false) {
         if (displayValue.textContent === "0" || clearDisplay === true) {
             num1 = "1";
             displayValue.textContent = "1";
@@ -91,13 +102,12 @@ number1.addEventListener('click', function() {
             num1 += "1";
             displayValue.textContent += "1";
         }
-    }
-    else if (num2Check === true) {
+    } else if (num2Check === true) {
         num2 += "1";
         displayValue.textContent += "1";
     }
-    
 });
+
 
 number2.addEventListener('click', function() {
     if (operateCheck === true){
@@ -295,18 +305,21 @@ number0.addEventListener('click', function() {
     } else if (num2Check === false) {
         num1 = displayValue.textContent;
         if (displayValue.textContent === "0" || clearDisplay === true) {
-            num1 = "0"; // Update num1 directly
-            displayValue.textContent = "0";
-            clearDisplay = false;
+            // Do nothing, as the first character is already "0"
         } else {
             num1 += "0"; // Update num1 directly
             displayValue.textContent += "0";
         }
     } else if (num2Check === true) {
-        num2 += "0"; // Update num2 directly
-        displayValue.textContent += "0";
+        if (displayValue.textContent === "0") {
+            // Do nothing, as the first character is already "0"
+        } else {
+            num2 += "0"; // Update num2 directly
+            displayValue.textContent += "0";
+        }
     }
 });
+
 
 const plus = document.getElementById('plus');
 const minus = document.getElementById('minus');
@@ -342,8 +355,9 @@ plusMinus.addEventListener('click', () => {
             num2 = `${"-"}${num2}`;
         }
     }
-    
 });
+
+let operatorCheck = false;
 
 plus.addEventListener('click', () => {
     num1 = displayValue.textContent;
@@ -351,6 +365,7 @@ plus.addEventListener('click', () => {
     plus.classList.add('operator-clicked');
     num2Check = true;
     clearDisplay = true;
+    operatorCheck = true;
 });
 
 minus.addEventListener('click', () => {
@@ -359,6 +374,7 @@ minus.addEventListener('click', () => {
     minus.classList.add('operator-clicked');
     num2Check = true;
     clearDisplay = true;
+    operatorCheck = true;
 });
 
 x.addEventListener('click', () => {
@@ -367,6 +383,7 @@ x.addEventListener('click', () => {
     x.classList.add('operator-clicked');
     num2Check = true;
     clearDisplay = true;
+    operatorCheck = true;
 });
 
 divider.addEventListener('click', () => {
@@ -375,6 +392,7 @@ divider.addEventListener('click', () => {
     divider.classList.add('operator-clicked');
     num2Check = true;
     clearDisplay = true;
+    operatorCheck = true;
 });
 
 remainderr.addEventListener('click', () => {
@@ -383,7 +401,9 @@ remainderr.addEventListener('click', () => {
     remainderr.classList.add('operator-clicked');
     num2Check = true;
     clearDisplay = true;
+    operatorCheck = true;
 });
+
 
 equals.addEventListener('click', function() {
     operate(num1, operator, num2);
