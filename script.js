@@ -84,21 +84,10 @@ const number9 = document.getElementById('number9');
 const number0 = document.getElementById('number0');
 
 number1.addEventListener('click', function () {
-    if (operateCheck === true && operatorCheck === false) {
-        // Start a new cycle, reset everything
-        if (num1 === "1") {
-            // If num1 is already "1", append more "1"s
-            num1 += "1";
-            displayValue.textContent += "1";
-        } else {
-            // Otherwise, set num1 to "1" and update the display
-            num1 = "1";
-            displayValue.textContent = "1";
-        }
-        clearDisplay = false;
-        operatorCheck = false;
-        console.log('num1:', num1);
-    } else if (num2Check === true && clearDisplay === true) {
+    if (operateCheck === true){
+        num1 = result;
+    }
+    if (num2Check === true && clearDisplay === true) {
         num2 = "1";
         displayValue.textContent = "1";
         clearDisplay = false;
@@ -106,22 +95,17 @@ number1.addEventListener('click', function () {
         num1 = displayValue.textContent;
         if (displayValue.textContent === "0" || clearDisplay === true) {
             num1 = "1";
-            console.log('num1:', num1);
             displayValue.textContent = "1";
             clearDisplay = false;
         } else {
             num1 += "1";
             displayValue.textContent += "1";
-            console.log('num1:', num1);
         }
     } else if (num2Check === true) {
         num2 += "1";
         displayValue.textContent += "1";
     }
 });
-
-
-
 
 number2.addEventListener('click', function() {
     if (operateCheck === true){
