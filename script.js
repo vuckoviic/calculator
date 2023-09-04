@@ -22,7 +22,7 @@ let num1 = 0;
 let operator = "";
 let num2 = 0;
 let num2Check = false;
-let operateCheck;
+let operateCheck = false;
 
 const operate = function(num1, operator, num2) {
 
@@ -33,7 +33,7 @@ const operate = function(num1, operator, num2) {
         num2 = "0";
     }
 
-    operateCheck = false;
+    num2Check = false;
 
     let num1Num = Number(num1);
     let num2Num = Number(num2);
@@ -85,28 +85,42 @@ const number0 = document.getElementById('number0');
 
 number1.addEventListener('click', function () {
     if (operateCheck === true && operatorCheck === false) {
-        num1 = result; // Set num1 to the result if there's a result and no operator is clicked
-        operateCheck = false; // Clear the result
-    }
-
-    if (num2Check === true && operatorCheck === true) {
+        // Start a new cycle, reset everything
+        if (num1 === "1") {
+            // If num1 is already "1", append more "1"s
+            num1 += "1";
+            displayValue.textContent += "1";
+        } else {
+            // Otherwise, set num1 to "1" and update the display
+            num1 = "1";
+            displayValue.textContent = "1";
+        }
+        clearDisplay = false;
+        operatorCheck = false;
+        console.log('num1:', num1);
+    } else if (num2Check === true && clearDisplay === true) {
         num2 = "1";
         displayValue.textContent = "1";
         clearDisplay = false;
-    } else if (operatorCheck === false) {
+    } else if (num2Check === false) {
+        num1 = displayValue.textContent;
         if (displayValue.textContent === "0" || clearDisplay === true) {
             num1 = "1";
+            console.log('num1:', num1);
             displayValue.textContent = "1";
             clearDisplay = false;
         } else {
             num1 += "1";
             displayValue.textContent += "1";
+            console.log('num1:', num1);
         }
     } else if (num2Check === true) {
         num2 += "1";
         displayValue.textContent += "1";
     }
 });
+
+
 
 
 number2.addEventListener('click', function() {
