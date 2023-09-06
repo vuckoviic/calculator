@@ -84,237 +84,437 @@ const number9 = document.getElementById('number9');
 const number0 = document.getElementById('number0');
 
 number1.addEventListener('click', function () {
-    if (operateCheck === true){
-        num1 = result;
-    }
-    if (num2Check === true && clearDisplay === true) {
-        num2 = "1";
-        displayValue.textContent = "1";
-        clearDisplay = false;
-    } else if (num2Check === false) {
-        num1 = displayValue.textContent;
-        if (displayValue.textContent === "0" || clearDisplay === true) {
+    switch (true) {
+        case operateCheck === true && operatorCheck === false:
+            operateCheck = false;
+            result = 0; // Restart the result
             num1 = "1";
+            num2 = 0; // Set num2 to 0
             displayValue.textContent = "1";
             clearDisplay = false;
-        } else {
-            num1 += "1";
+            console.log(num1);
+            break;
+        
+        case num2Check === true && clearDisplay === true:
+            num2 = "1";
+            displayValue.textContent = "1";
+            clearDisplay = false;
+            console.log(num2);
+            break;
+        
+        case num2Check === false:
+            num1 = displayValue.textContent;
+            if (displayValue.textContent === "0" || clearDisplay === true) {
+                num1 = "1";
+                displayValue.textContent = "1";
+                clearDisplay = false;
+            } else {
+                num1 += "1";
+                displayValue.textContent += "1";
+            }
+            console.log(num1);
+            break;
+        
+        case num2Check === true && operateCheck === false:
+            num2 += "1";
             displayValue.textContent += "1";
-        }
-    } else if (num2Check === true) {
-        num2 += "1";
-        displayValue.textContent += "1";
+            console.log(num2);
+            break;
+        
+        default:
+            // Handle other cases if needed
+            break;
     }
 });
 
+
+
 number2.addEventListener('click', function() {
-    if (operateCheck === true){
-        num1 = result;
-    }
-    if (num2Check === true && clearDisplay === true) {
-        num2 = "2";
-        displayValue.textContent = "2";
-        clearDisplay = false;
-    } else if (num2Check === false) {
-        num1 = displayValue.textContent;
-        if (displayValue.textContent === "0" || clearDisplay === true) {
+    switch (true) {
+        case operateCheck === true && operatorCheck === false:
+            operateCheck = false;
+            result = 0; // Restart the result
             num1 = "2";
+            num2 = 0; // Set num2 to 0
             displayValue.textContent = "2";
             clearDisplay = false;
-        } else {
-            num1 += "2";
+            console.log(num1);
+            break;
+        
+        case num2Check === true && clearDisplay === true:
+            num2 = "2";
+            displayValue.textContent = "2";
+            clearDisplay = false;
+            console.log(num2);
+            break;
+        
+        case num2Check === false:
+            num1 = displayValue.textContent;
+            if (displayValue.textContent === "0" || clearDisplay === true) {
+                num1 = "1";
+                displayValue.textContent = "2";
+                clearDisplay = false;
+            } else {
+                num1 += "1";
+                displayValue.textContent += "2";
+            }
+            console.log(num1);
+            break;
+        
+        case num2Check === true && operateCheck === false:
+            num2 += "2";
             displayValue.textContent += "2";
-        }
-    } else if (num2Check === true) {
-        num2 += "2";
-        displayValue.textContent += "2";
+            console.log(num2);
+            break;
+        
+        default:
+            // Handle other cases if needed
+            break;
     }
 });
 
 number3.addEventListener('click', function() {
-    if (operateCheck === true){
-        num1 = result;
-    }
-    if (num2Check === true && clearDisplay === true) {
-        num2 = "3"; // Update num2 directly
-        displayValue.textContent = "3";
-        clearDisplay = false;
-    } else if (num2Check === false) {
-        num1 = displayValue.textContent;
-        if (displayValue.textContent === "0" || clearDisplay === true) {
-            num1 = "3"; // Update num1 directly
+    switch (true) {
+        case operateCheck === true && operatorCheck === false:
+            operateCheck = false;
+            result = 0; // Restart the result
+            num1 = "3";
+            num2 = 0; // Set num2 to 0
             displayValue.textContent = "3";
             clearDisplay = false;
-        } else {
-            num1 += "3"; // Update num1 directly
+            console.log(num1);
+            break;
+        
+        case num2Check === true && clearDisplay === true:
+            num2 = "3";
+            displayValue.textContent = "3";
+            clearDisplay = false;
+            console.log(num2);
+            break;
+        
+        case num2Check === false:
+            num1 = displayValue.textContent;
+            if (displayValue.textContent === "0" || clearDisplay === true) {
+                num1 = "3";
+                displayValue.textContent = "3";
+                clearDisplay = false;
+            } else {
+                num1 += "3";
+                displayValue.textContent += "3";
+            }
+            console.log(num1);
+            break;
+        
+        case num2Check === true && operateCheck === false:
+            num2 += "3";
             displayValue.textContent += "3";
-        }
-    } else if (num2Check === true) {
-        num2 += "3"; // Update num2 directly
-        displayValue.textContent += "3";
+            console.log(num2);
+            break;
+        
+        default:
+            // Handle other cases if needed
+            break;
     }
 });
 number4.addEventListener('click', function() {
-    if (operateCheck === true){
-        num1 = result;
-    }
-    if (num2Check === true && clearDisplay === true) {
-        num2 = "4"; // Update num2 directly
-        displayValue.textContent = "4";
-        clearDisplay = false;
-    } else if (num2Check === false) {
-        num1 = displayValue.textContent;
-        if (displayValue.textContent === "0" || clearDisplay === true) {
-            num1 = "4"; // Update num1 directly
+    switch (true) {
+        case operateCheck === true && operatorCheck === false:
+            operateCheck = false;
+            result = 0; // Restart the result
+            num1 = "4";
+            num2 = 0; // Set num2 to 0
             displayValue.textContent = "4";
             clearDisplay = false;
-        } else {
-            num1 += "4"; // Update num1 directly
+            console.log(num1);
+            break;
+        
+        case num2Check === true && clearDisplay === true:
+            num2 = "4";
+            displayValue.textContent = "4";
+            clearDisplay = false;
+            console.log(num2);
+            break;
+        
+        case num2Check === false:
+            num1 = displayValue.textContent;
+            if (displayValue.textContent === "0" || clearDisplay === true) {
+                num1 = "4";
+                displayValue.textContent = "4";
+                clearDisplay = false;
+            } else {
+                num1 += "4";
+                displayValue.textContent += "4";
+            }
+            console.log(num1);
+            break;
+        
+        case num2Check === true && operateCheck === false:
+            num2 += "4";
             displayValue.textContent += "4";
-        }
-    } else if (num2Check === true) {
-        num2 += "4"; // Update num2 directly
-        displayValue.textContent += "4";
+            console.log(num2);
+            break;
+        
+        default:
+            // Handle other cases if needed
+            break;
     }
 });
 number5.addEventListener('click', function() {
-    if (operateCheck === true){
-        num1 = result;
-    }
-    if (num2Check === true && clearDisplay === true) {
-        num2 = "5"; // Update num2 directly
-        displayValue.textContent = "5";
-        clearDisplay = false;
-    } else if (num2Check === false) {
-        num1 = displayValue.textContent;
-        if (displayValue.textContent === "0" || clearDisplay === true) {
-            num1 = "5"; // Update num1 directly
+    switch (true) {
+        case operateCheck === true && operatorCheck === false:
+            operateCheck = false;
+            result = 0; // Restart the result
+            num1 = "5";
+            num2 = 0; // Set num2 to 0
             displayValue.textContent = "5";
             clearDisplay = false;
-        } else {
-            num1 += "5"; // Update num1 directly
+            console.log(num1);
+            break;
+        
+        case num2Check === true && clearDisplay === true:
+            num2 = "5";
+            displayValue.textContent = "5";
+            clearDisplay = false;
+            console.log(num2);
+            break;
+        
+        case num2Check === false:
+            num1 = displayValue.textContent;
+            if (displayValue.textContent === "0" || clearDisplay === true) {
+                num1 = "5";
+                displayValue.textContent = "5";
+                clearDisplay = false;
+            } else {
+                num1 += "5";
+                displayValue.textContent += "5";
+            }
+            console.log(num1);
+            break;
+        
+        case num2Check === true && operateCheck === false:
+            num2 += "5";
             displayValue.textContent += "5";
-        }
-    } else if (num2Check === true) {
-        num2 += "5"; // Update num2 directly
-        displayValue.textContent += "5";
+            console.log(num2);
+            break;
+        
+        default:
+            // Handle other cases if needed
+            break;
     }
 });
 number6.addEventListener('click', function() {
-    if (operateCheck === true){
-        num1 = result;
-    }
-    if (num2Check === true && clearDisplay === true) {
-        num2 = "6"; // Update num2 directly
-        displayValue.textContent = "6";
-        clearDisplay = false;
-    } else if (num2Check === false) {
-        num1 = displayValue.textContent;
-        if (displayValue.textContent === "0" || clearDisplay === true) {
-            num1 = "6"; // Update num1 directly
+    switch (true) {
+        case operateCheck === true && operatorCheck === false:
+            operateCheck = false;
+            result = 0; // Restart the result
+            num1 = "6";
+            num2 = 0; // Set num2 to 0
             displayValue.textContent = "6";
             clearDisplay = false;
-        } else {
-            num1 += "6"; // Update num1 directly
+            console.log(num1);
+            break;
+        
+        case num2Check === true && clearDisplay === true:
+            num2 = "6";
+            displayValue.textContent = "6";
+            clearDisplay = false;
+            console.log(num2);
+            break;
+        
+        case num2Check === false:
+            num1 = displayValue.textContent;
+            if (displayValue.textContent === "0" || clearDisplay === true) {
+                num1 = "6";
+                displayValue.textContent = "6";
+                clearDisplay = false;
+            } else {
+                num1 += "6";
+                displayValue.textContent += "6";
+            }
+            console.log(num1);
+            break;
+        
+        case num2Check === true && operateCheck === false:
+            num2 += "6";
             displayValue.textContent += "6";
-        }
-    } else if (num2Check === true) {
-        num2 += "6"; // Update num2 directly
-        displayValue.textContent += "6";
+            console.log(num2);
+            break;
+        
+        default:
+            // Handle other cases if needed
+            break;
     }
 });
 number7.addEventListener('click', function() {
-    if (operateCheck === true){
-        num1 = result;
-    }
-    if (num2Check === true && clearDisplay === true) {
-        num2 = "7"; // Update num2 directly
-        displayValue.textContent = "7";
-        clearDisplay = false;
-    } else if (num2Check === false) {
-        num1 = displayValue.textContent;
-        if (displayValue.textContent === "0" || clearDisplay === true) {
-            num1 = "7"; // Update num1 directly
+    switch (true) {
+        case operateCheck === true && operatorCheck === false:
+            operateCheck = false;
+            result = 0; // Restart the result
+            num1 = "7";
+            num2 = 0; // Set num2 to 0
             displayValue.textContent = "7";
             clearDisplay = false;
-        } else {
-            num1 += "7"; // Update num1 directly
+            console.log(num1);
+            break;
+        
+        case num2Check === true && clearDisplay === true:
+            num2 = "7";
+            displayValue.textContent = "7";
+            clearDisplay = false;
+            console.log(num2);
+            break;
+        
+        case num2Check === false:
+            num1 = displayValue.textContent;
+            if (displayValue.textContent === "0" || clearDisplay === true) {
+                num1 = "7";
+                displayValue.textContent = "7";
+                clearDisplay = false;
+            } else {
+                num1 += "7";
+                displayValue.textContent += "7";
+            }
+            console.log(num1);
+            break;
+        
+        case num2Check === true && operateCheck === false:
+            num2 += "7";
             displayValue.textContent += "7";
-        }
-    } else if (num2Check === true) {
-        num2 += "7"; // Update num2 directly
-        displayValue.textContent += "7";
+            console.log(num2);
+            break;
+        
+        default:
+            // Handle other cases if needed
+            break;
     }
 });
 number8.addEventListener('click', function() {
-    if (operateCheck === true){
-        num1 = result;
-    }
-    if (num2Check === true && clearDisplay === true) {
-        num2 = "8"; // Update num2 directly
-        displayValue.textContent = "8";
-        clearDisplay = false;
-    } else if (num2Check === false) {
-        num1 = displayValue.textContent;
-        if (displayValue.textContent === "0" || clearDisplay === true) {
-            num1 = "8"; // Update num1 directly
+    switch (true) {
+        case operateCheck === true && operatorCheck === false:
+            operateCheck = false;
+            result = 0; // Restart the result
+            num1 = "8";
+            num2 = 0; // Set num2 to 0
             displayValue.textContent = "8";
             clearDisplay = false;
-        } else {
-            num1 += "8"; // Update num1 directly
+            console.log(num1);
+            break;
+        
+        case num2Check === true && clearDisplay === true:
+            num2 = "8";
+            displayValue.textContent = "8";
+            clearDisplay = false;
+            console.log(num2);
+            break;
+        
+        case num2Check === false:
+            num1 = displayValue.textContent;
+            if (displayValue.textContent === "0" || clearDisplay === true) {
+                num1 = "8";
+                displayValue.textContent = "8";
+                clearDisplay = false;
+            } else {
+                num1 += "8";
+                displayValue.textContent += "8";
+            }
+            console.log(num1);
+            break;
+        
+        case num2Check === true && operateCheck === false:
+            num2 += "8";
             displayValue.textContent += "8";
-        }
-    } else if (num2Check === true) {
-        num2 += "8"; // Update num2 directly
-        displayValue.textContent += "8";
+            console.log(num2);
+            break;
+        
+        default:
+            // Handle other cases if needed
+            break;
     }
 });
 number9.addEventListener('click', function() {
-    if (operateCheck === true){
-        num1 = result;
-    }
-    if (num2Check === true && clearDisplay === true) {
-        num2 = "9"; // Update num2 directly
-        displayValue.textContent = "9";
-        clearDisplay = false;
-    } else if (num2Check === false) {
-        num1 = displayValue.textContent;
-        if (displayValue.textContent === "0" || clearDisplay === true) {
-            num1 = "9"; // Update num1 directly
+    switch (true) {
+        case operateCheck === true && operatorCheck === false:
+            operateCheck = false;
+            result = 0; // Restart the result
+            num1 = "9";
+            num2 = 0; // Set num2 to 0
             displayValue.textContent = "9";
             clearDisplay = false;
-        } else {
-            num1 += "9"; // Update num1 directly
+            console.log(num1);
+            break;
+        
+        case num2Check === true && clearDisplay === true:
+            num2 = "9";
+            displayValue.textContent = "9";
+            clearDisplay = false;
+            console.log(num2);
+            break;
+        
+        case num2Check === false:
+            num1 = displayValue.textContent;
+            if (displayValue.textContent === "0" || clearDisplay === true) {
+                num1 = "9";
+                displayValue.textContent = "9";
+                clearDisplay = false;
+            } else {
+                num1 += "9";
+                displayValue.textContent += "9";
+            }
+            console.log(num1);
+            break;
+        
+        case num2Check === true && operateCheck === false:
+            num2 += "9";
             displayValue.textContent += "9";
-        }
-    } else if (num2Check === true) {
-        num2 += "9"; // Update num2 directly
-        displayValue.textContent += "9";
+            console.log(num2);
+            break;
+        
+        default:
+            // Handle other cases if needed
+            break;
     }
 });
 number0.addEventListener('click', function() {
-    if (operateCheck === true){
-        num1 = result;
-    }
-    if (num2Check === true && clearDisplay === true) {
-        num2 = "0"; // Update num2 directly
-        displayValue.textContent = "0";
-        clearDisplay = false;
-    } else if (num2Check === false) {
-        num1 = displayValue.textContent;
-        if (displayValue.textContent === "0" || clearDisplay === true) {
-            // Do nothing, as the first character is already "0"
-        } else {
-            num1 += "0"; // Update num1 directly
+    switch (true) {
+        case operateCheck === true && operatorCheck === false:
+            operateCheck = false;
+            result = 0; // Restart the result
+            num1 = "0";
+            num2 = 0; // Set num2 to 0
+            displayValue.textContent = "1";
+            clearDisplay = false;
+            console.log(num1);
+            break;
+        
+        case num2Check === true && clearDisplay === true:
+            num2 = "0";
+            displayValue.textContent = "0";
+            clearDisplay = false;
+            console.log(num2);
+            break;
+        
+        case num2Check === false:
+            num1 = displayValue.textContent;
+            if (displayValue.textContent === "0" || clearDisplay === true) {
+                num1 = "0";
+                displayValue.textContent = "0";
+                clearDisplay = false;
+            } else {
+                num1 += "0";
+                displayValue.textContent += "0";
+            }
+            console.log(num1);
+            break;
+        
+        case num2Check === true && operateCheck === false:
+            num2 += "0";
             displayValue.textContent += "0";
-        }
-    } else if (num2Check === true) {
-        if (displayValue.textContent === "0") {
-            // Do nothing, as the first character is already "0"
-        } else {
-            num2 += "0"; // Update num2 directly
-            displayValue.textContent += "0";
-        }
+            console.log(num2);
+            break;
+        
+        default:
+            // Handle other cases if needed
+            break;
     }
 });
 
