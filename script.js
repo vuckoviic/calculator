@@ -537,6 +537,7 @@ const remainderr = document.getElementById('remainder'); //because divide and re
 const AC = document.getElementById('AC');
 const plusMinus = document.getElementById('plus-minus');
 const equals = document.getElementById('equals');
+const point = document.getElementById('point');
 
 let clearDisplay = false;
 
@@ -626,6 +627,9 @@ remainderr.addEventListener('click', () => {
     operatorCheck = true;
 });
 
+point.addEventListener('click', () => {
+
+})
 
 equals.addEventListener('click', function() {
     operate(num1, operator, num2);
