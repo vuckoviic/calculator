@@ -103,6 +103,7 @@ number1.addEventListener('click', function () {
             break;
         
         case num2Check === false:
+            operateCheck = false; 
             num1 = displayValue.textContent;
             if (displayValue.textContent === "0" || clearDisplay === true) {
                 num1 = "1";
@@ -115,7 +116,7 @@ number1.addEventListener('click', function () {
             console.log(num1);
             break;
         
-        case num2Check === true && operateCheck === false:
+        case num2Check === true && operatorCheck === true:
             num2 += "1";
             displayValue.textContent += "1";
             console.log(num2);
@@ -149,6 +150,7 @@ number2.addEventListener('click', function() {
             break;
         
         case num2Check === false:
+            operateCheck = false; 
             num1 = displayValue.textContent;
             if (displayValue.textContent === "0" || clearDisplay === true) {
                 num1 = "1";
@@ -161,7 +163,7 @@ number2.addEventListener('click', function() {
             console.log(num1);
             break;
         
-        case num2Check === true && operateCheck === false:
+        case num2Check === true && operatorCheck === true:
             num2 += "2";
             displayValue.textContent += "2";
             console.log(num2);
@@ -193,6 +195,7 @@ number3.addEventListener('click', function() {
             break;
         
         case num2Check === false:
+            operateCheck = false; 
             num1 = displayValue.textContent;
             if (displayValue.textContent === "0" || clearDisplay === true) {
                 num1 = "3";
@@ -205,7 +208,7 @@ number3.addEventListener('click', function() {
             console.log(num1);
             break;
         
-        case num2Check === true && operateCheck === false:
+        case num2Check === true && operatorCheck === true:
             num2 += "3";
             displayValue.textContent += "3";
             console.log(num2);
@@ -236,6 +239,7 @@ number4.addEventListener('click', function() {
             break;
         
         case num2Check === false:
+            operateCheck = false; 
             num1 = displayValue.textContent;
             if (displayValue.textContent === "0" || clearDisplay === true) {
                 num1 = "4";
@@ -248,7 +252,7 @@ number4.addEventListener('click', function() {
             console.log(num1);
             break;
         
-        case num2Check === true && operateCheck === false:
+        case num2Check === true && operatorCheck === true:
             num2 += "4";
             displayValue.textContent += "4";
             console.log(num2);
@@ -279,6 +283,7 @@ number5.addEventListener('click', function() {
             break;
         
         case num2Check === false:
+            operateCheck = false; 
             num1 = displayValue.textContent;
             if (displayValue.textContent === "0" || clearDisplay === true) {
                 num1 = "5";
@@ -291,7 +296,7 @@ number5.addEventListener('click', function() {
             console.log(num1);
             break;
         
-        case num2Check === true && operateCheck === false:
+        case num2Check === true && operatorCheck === true:
             num2 += "5";
             displayValue.textContent += "5";
             console.log(num2);
@@ -322,6 +327,7 @@ number6.addEventListener('click', function() {
             break;
         
         case num2Check === false:
+            operateCheck = false; 
             num1 = displayValue.textContent;
             if (displayValue.textContent === "0" || clearDisplay === true) {
                 num1 = "6";
@@ -334,7 +340,7 @@ number6.addEventListener('click', function() {
             console.log(num1);
             break;
         
-        case num2Check === true && operateCheck === false:
+        case num2Check === true && operatorCheck === true:
             num2 += "6";
             displayValue.textContent += "6";
             console.log(num2);
@@ -365,6 +371,7 @@ number7.addEventListener('click', function() {
             break;
         
         case num2Check === false:
+            operateCheck = false; 
             num1 = displayValue.textContent;
             if (displayValue.textContent === "0" || clearDisplay === true) {
                 num1 = "7";
@@ -377,7 +384,7 @@ number7.addEventListener('click', function() {
             console.log(num1);
             break;
         
-        case num2Check === true && operateCheck === false:
+        case num2Check === true && operatorCheck === true:
             num2 += "7";
             displayValue.textContent += "7";
             console.log(num2);
@@ -408,6 +415,7 @@ number8.addEventListener('click', function() {
             break;
         
         case num2Check === false:
+            operateCheck = false; 
             num1 = displayValue.textContent;
             if (displayValue.textContent === "0" || clearDisplay === true) {
                 num1 = "8";
@@ -420,7 +428,7 @@ number8.addEventListener('click', function() {
             console.log(num1);
             break;
         
-        case num2Check === true && operateCheck === false:
+        case num2Check === true && operatorCheck === true:
             num2 += "8";
             displayValue.textContent += "8";
             console.log(num2);
@@ -451,6 +459,7 @@ number9.addEventListener('click', function() {
             break;
         
         case num2Check === false:
+            operateCheck = false; 
             num1 = displayValue.textContent;
             if (displayValue.textContent === "0" || clearDisplay === true) {
                 num1 = "9";
@@ -463,7 +472,7 @@ number9.addEventListener('click', function() {
             console.log(num1);
             break;
         
-        case num2Check === true && operateCheck === false:
+        case num2Check === true && operatorCheck === true:
             num2 += "9";
             displayValue.textContent += "9";
             console.log(num2);
@@ -494,6 +503,7 @@ number0.addEventListener('click', function() {
             break;
         
         case num2Check === false:
+            operateCheck = false; 
             num1 = displayValue.textContent;
             if (displayValue.textContent === "0" || clearDisplay === true) {
                 num1 = "0";
@@ -506,7 +516,7 @@ number0.addEventListener('click', function() {
             console.log(num1);
             break;
         
-        case num2Check === true && operateCheck === false:
+        case num2Check === true && operatorCheck === true:
             num2 += "0";
             displayValue.textContent += "0";
             console.log(num2);
