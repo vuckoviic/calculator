@@ -549,20 +549,29 @@ AC.addEventListener('click', () => {
     displayValue.textContent = "0";
 });
 
+plusMinus.disabled = false;
+
 plusMinus.addEventListener('click', () => {
+    plusMinus.disabled = false;
+
     if (displayValue.textContent !== "0"){
-        displayValue.textContent = `${"-"}${displayValue.textContent}`
-        if (displayValue.textContent == num1){
-            num1 = `${"-"}${num1}`;
-        }
-        else if (displayValue.textContent === "" || displayValue.textContent === "0"){
-            num1 = num1;
-            num2 = num2;
-        }
-        else{
-            num2 = `${"-"}${num2}`;
-        }
+        displayValue.textContent = `${"-"}${displayValue.textContent}`;
+        plusMinus.disabled = true;
     }
+            if (displayValue.textContent == num1){
+                num1 = `${"-"}${num1}`;
+                plusMinus.disabled = true;
+            }
+            else if (displayValue.textContent === "" || displayValue.textContent === "0"){
+                num1 = num1;
+                num2 = num2;
+            }
+
+            else{
+                num2 = `${"-"}${num2}`;
+                plusMinus.disabled = true;
+            }
+            console.log(plusMinus.disabled);
 });
 
 let operatorCheck = false;
@@ -572,6 +581,7 @@ plus.addEventListener('click', () => {
     operator = "+";
     plus.classList.add('operator-clicked');
     num2Check = true;
+    plusMinus.disabled = false;
     clearDisplay = true;
     operatorCheck = true;
 });
@@ -581,6 +591,7 @@ minus.addEventListener('click', () => {
     operator = "-";
     minus.classList.add('operator-clicked');
     num2Check = true;
+    plusMinus.disabled = false;
     clearDisplay = true;
     operatorCheck = true;
 });
@@ -590,6 +601,7 @@ x.addEventListener('click', () => {
     operator = "x";
     x.classList.add('operator-clicked');
     num2Check = true;
+    plusMinus.disabled = false;
     clearDisplay = true;
     operatorCheck = true;
 });
@@ -599,6 +611,7 @@ divider.addEventListener('click', () => {
     operator = "/";
     divider.classList.add('operator-clicked');
     num2Check = true;
+    plusMinus.disabled = false;
     clearDisplay = true;
     operatorCheck = true;
 });
@@ -608,6 +621,7 @@ remainderr.addEventListener('click', () => {
     operator = "%";
     remainderr.classList.add('operator-clicked');
     num2Check = true;
+    plusMinus.disabled = false;
     clearDisplay = true;
     operatorCheck = true;
 });
