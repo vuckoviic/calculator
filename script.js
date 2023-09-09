@@ -102,6 +102,11 @@ const number0 = document.getElementById('number0');
 
 number1.addEventListener('click', function () {
     switch (true) {
+        case displayValue.textContent === "0.":
+            num1 += "1";
+            displayValue.textContent += "1";
+            break;
+
         case operateCheck === true && operatorCheck === false:
             operateCheck = false;
             result = 0; // Restart the result
@@ -118,7 +123,7 @@ number1.addEventListener('click', function () {
             clearDisplay = false;
             console.log(num2);
             break;
-        
+
         case num2Check === false:
             operateCheck = false; 
             num1 = displayValue.textContent;
@@ -147,6 +152,10 @@ number1.addEventListener('click', function () {
 
 number2.addEventListener('click', function() {
     switch (true) {
+        case displayValue.textContent === "0.":
+            num1 += "2";
+            displayValue.textContent += "2";
+            break;
         case operateCheck === true && operatorCheck === false:
             operateCheck = false;
             result = 0; // Restart the result
@@ -192,6 +201,10 @@ number2.addEventListener('click', function() {
 
 number3.addEventListener('click', function() {
     switch (true) {
+        case displayValue.textContent === "0.":
+            num1 += "3";
+            displayValue.textContent += "3";
+            break;
         case operateCheck === true && operatorCheck === false:
             operateCheck = false;
             result = 0; // Restart the result
@@ -236,6 +249,11 @@ number3.addEventListener('click', function() {
 });
 number4.addEventListener('click', function() {
     switch (true) {
+        case displayValue.textContent === "0.":
+            num1 += "4";
+            displayValue.textContent += "4";
+            break;
+
         case operateCheck === true && operatorCheck === false:
             operateCheck = false;
             result = 0; // Restart the result
@@ -280,6 +298,11 @@ number4.addEventListener('click', function() {
 });
 number5.addEventListener('click', function() {
     switch (true) {
+        case displayValue.textContent === "0.":
+            num1 += "5";
+            displayValue.textContent += "5";
+            break;
+
         case operateCheck === true && operatorCheck === false:
             operateCheck = false;
             result = 0; // Restart the result
@@ -324,6 +347,11 @@ number5.addEventListener('click', function() {
 });
 number6.addEventListener('click', function() {
     switch (true) {
+        case displayValue.textContent === "0.":
+            num1 += "6";
+            displayValue.textContent += "6";
+            break;
+
         case operateCheck === true && operatorCheck === false:
             operateCheck = false;
             result = 0; // Restart the result
@@ -368,6 +396,11 @@ number6.addEventListener('click', function() {
 });
 number7.addEventListener('click', function() {
     switch (true) {
+        case displayValue.textContent === "0.":
+            num1 += "7";
+            displayValue.textContent += "7";
+            break;
+
         case operateCheck === true && operatorCheck === false:
             operateCheck = false;
             result = 0; // Restart the result
@@ -412,6 +445,10 @@ number7.addEventListener('click', function() {
 });
 number8.addEventListener('click', function() {
     switch (true) {
+        case displayValue.textContent === "0.":
+            num1 += "8";
+            displayValue.textContent += "8";
+            break;
         case operateCheck === true && operatorCheck === false:
             operateCheck = false;
             result = 0; // Restart the result
@@ -456,6 +493,11 @@ number8.addEventListener('click', function() {
 });
 number9.addEventListener('click', function() {
     switch (true) {
+        case displayValue.textContent === "0.":
+            num1 += "9";
+            displayValue.textContent += "1";
+            break;
+
         case operateCheck === true && operatorCheck === false:
             operateCheck = false;
             result = 0; // Restart the result
@@ -500,6 +542,11 @@ number9.addEventListener('click', function() {
 });
 number0.addEventListener('click', function() {
     switch (true) {
+        case displayValue.textContent === "0.":
+            num1 += "0";
+            displayValue.textContent += "0";
+            break;
+
         case operateCheck === true && operatorCheck === false:
             operateCheck = false;
             result = 0; // Restart the result
@@ -643,10 +690,18 @@ remainderr.addEventListener('click', () => {
     operatorCheck = true;
 });
 
-point.disabled = false;
-
 point.addEventListener('click', () => {
-    point.disabled = false;
+    if (displayValue.textContent === "0"){
+        num1 += ".";
+        displayValue.textContent += ".";
+    }
+    if (operateCheck === true && num2Check === false){
+        result = "";
+        num1 = "0.";
+        num2 = "0";
+        displayValue.textContent = "0.";
+        clearDisplay = true;
+    }
 
     if(!num1.includes(".") && num2Check === false){
         num1 += ".";
