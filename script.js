@@ -35,11 +35,28 @@ const operate = function(num1, operator, num2) {
 
     num2Check = false;
 
-    let num1Num = Number(num1);
-    let num2Num = Number(num2);
-
+    let num1Num;
+    let num2Num;
+    
+    if (num1.includes(".")) {
+        num1Num = parseFloat(num1);
+        console.log(`Num1 in float is: ${num1Num}`);
+    } else {
+        num1Num = parseInt(num1);
+        console.log(`Num1 in integer is: ${num1Num}`);
+    }
+    
+    if (num2.includes(".")) {
+        num2Num = parseFloat(num2);
+        console.log(`Num2 in float is: ${num2Num}`);
+    } else {
+        num2Num = parseInt(num2);
+        console.log(`Num2 in integer is: ${num2Num}`);
+    }
+    
     console.log(num1Num);
     console.log(num2Num);
+    
 
     if (operator === "+") {
         result = add(num1Num, num2Num);
@@ -128,8 +145,6 @@ number1.addEventListener('click', function () {
     }
 });
 
-
-
 number2.addEventListener('click', function() {
     switch (true) {
         case operateCheck === true && operatorCheck === false:
@@ -153,11 +168,11 @@ number2.addEventListener('click', function() {
             operateCheck = false; 
             num1 = displayValue.textContent;
             if (displayValue.textContent === "0" || clearDisplay === true) {
-                num1 = "1";
+                num1 = "2";
                 displayValue.textContent = "2";
                 clearDisplay = false;
             } else {
-                num1 += "1";
+                num1 += "2";
                 displayValue.textContent += "2";
             }
             console.log(num1);
@@ -573,6 +588,7 @@ plusMinus.addEventListener('click', () => {
                 plusMinus.disabled = true;
             }
             console.log(plusMinus.disabled);
+            operatorCheck = false;
 });
 
 let operatorCheck = false;
@@ -627,9 +643,27 @@ remainderr.addEventListener('click', () => {
     operatorCheck = true;
 });
 
-point.addEventListener('click', () => {
+point.disabled = false;
 
-})
+point.addEventListener('click', () => {
+    point.disabled = false;
+
+    if(!num1.includes(".") && num2Check === false){
+        num1 += ".";
+        displayValue.textContent += ".";
+    }
+    else {
+        num1 = num1;
+    }
+    
+    if(!num2.includes(".") && num2Check === true){
+        num2 += ".";
+        displayValue.textContent += ".";
+    }
+    else {
+        num2 = num2;
+    }
+});
 
 equals.addEventListener('click', function() {
     operate(num1, operator, num2);
