@@ -34,6 +34,8 @@ const operate = function(num1, operator, num2) {
     }
 
     num2Check = false;
+    plusMinus.disabled = false;
+
 
     let num1Num;
     let num2Num;
@@ -111,7 +113,7 @@ number1.addEventListener('click', function () {
             operateCheck = false;
             result = 0; // Restart the result
             num1 = "1";
-            num2 = 0; // Set num2 to 0
+            num2 = ""; // Set num2 to 0
             displayValue.textContent = "1";
             clearDisplay = false;
             console.log(num1);
@@ -160,7 +162,7 @@ number2.addEventListener('click', function() {
             operateCheck = false;
             result = 0; // Restart the result
             num1 = "2";
-            num2 = 0; // Set num2 to 0
+            num2 = ""; // Set num2 to 0
             displayValue.textContent = "2";
             clearDisplay = false;
             console.log(num1);
@@ -209,7 +211,7 @@ number3.addEventListener('click', function() {
             operateCheck = false;
             result = 0; // Restart the result
             num1 = "3";
-            num2 = 0; // Set num2 to 0
+            num2 = ""; // Set num2 to 0
             displayValue.textContent = "3";
             clearDisplay = false;
             console.log(num1);
@@ -258,7 +260,7 @@ number4.addEventListener('click', function() {
             operateCheck = false;
             result = 0; // Restart the result
             num1 = "4";
-            num2 = 0; // Set num2 to 0
+            num2 = ""; // Set num2 to 0
             displayValue.textContent = "4";
             clearDisplay = false;
             console.log(num1);
@@ -307,7 +309,7 @@ number5.addEventListener('click', function() {
             operateCheck = false;
             result = 0; // Restart the result
             num1 = "5";
-            num2 = 0; // Set num2 to 0
+            num2 = ""; // Set num2 to 0
             displayValue.textContent = "5";
             clearDisplay = false;
             console.log(num1);
@@ -356,7 +358,7 @@ number6.addEventListener('click', function() {
             operateCheck = false;
             result = 0; // Restart the result
             num1 = "6";
-            num2 = 0; // Set num2 to 0
+            num2 = ""; // Set num2 to 0
             displayValue.textContent = "6";
             clearDisplay = false;
             console.log(num1);
@@ -405,7 +407,7 @@ number7.addEventListener('click', function() {
             operateCheck = false;
             result = 0; // Restart the result
             num1 = "7";
-            num2 = 0; // Set num2 to 0
+            num2 = ""; // Set num2 to 0
             displayValue.textContent = "7";
             clearDisplay = false;
             console.log(num1);
@@ -453,7 +455,7 @@ number8.addEventListener('click', function() {
             operateCheck = false;
             result = 0; // Restart the result
             num1 = "8";
-            num2 = 0; // Set num2 to 0
+            num2 = ""; // Set num2 to 0
             displayValue.textContent = "8";
             clearDisplay = false;
             console.log(num1);
@@ -502,7 +504,7 @@ number9.addEventListener('click', function() {
             operateCheck = false;
             result = 0; // Restart the result
             num1 = "9";
-            num2 = 0; // Set num2 to 0
+            num2 = ""; // Set num2 to 0
             displayValue.textContent = "9";
             clearDisplay = false;
             console.log(num1);
@@ -551,7 +553,7 @@ number0.addEventListener('click', function() {
             operateCheck = false;
             result = 0; // Restart the result
             num1 = "0";
-            num2 = 0; // Set num2 to 0
+            num2 = ""; // Set num2 to 0
             displayValue.textContent = "0";
             clearDisplay = false;
             console.log(num1);
@@ -606,10 +608,11 @@ let clearDisplay = false;
 AC.addEventListener('click', () => {
     num2Check = false;
     operateCheck = false;
-    num1 = 0;
-    num2 = 0;
+    num1 = "";
+    num2 = "";
     operator = "";
     displayValue.textContent = "0";
+    plusMinus.disabled = false;
 });
 
 plusMinus.disabled = false;
@@ -691,31 +694,30 @@ remainderr.addEventListener('click', () => {
 });
 
 point.addEventListener('click', () => {
-    if (displayValue.textContent === "0"){
-        num1 += ".";
-        displayValue.textContent += ".";
-    }
-    if (operateCheck === true && num2Check === false){
-        result = "";
-        num1 = "0.";
-        num2 = "0";
-        displayValue.textContent = "0.";
-        clearDisplay = true;
+    if (displayValue.textContent === "0") {
+        if (num1 !== "0.") { // Check if num1 is not already "0."
+            num1 += ".";
+            displayValue.textContent += ".";
+        }
+        num2 = num2; // Not necessary
     }
 
-    if(!num1.includes(".") && num2Check === false){
+    if (operateCheck === true && num2Check === false) {
+        result = "";
+        num1 = "0.";
+        displayValue.textContent = "0.";
+        clearDisplay = true;
+    } else if (!num1.includes(".") && num2Check === false) {
         num1 += ".";
         displayValue.textContent += ".";
-    }
-    else {
+    } else {
         num1 = num1;
     }
-    
-    if(!num2.includes(".") && num2Check === true){
+
+    if (!num2.includes(".") && num2Check === true) {
         num2 += ".";
         displayValue.textContent += ".";
-    }
-    else {
+    } else {
         num2 = num2;
     }
 });
