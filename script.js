@@ -78,7 +78,7 @@ const operate = function(num1, operator, num2) {
     }
 
     console.log(result);
-    displayValue.textContent = result;
+    displayValue.textContent = result.toFixed(2);
     operateCheck = true;
     operatorCheck = false;
     return result;
@@ -552,7 +552,7 @@ number0.addEventListener('click', function() {
             result = 0; // Restart the result
             num1 = "0";
             num2 = 0; // Set num2 to 0
-            displayValue.textContent = "1";
+            displayValue.textContent = "0";
             clearDisplay = false;
             console.log(num1);
             break;
