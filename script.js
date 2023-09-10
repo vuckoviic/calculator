@@ -624,6 +624,9 @@ plusMinus.addEventListener('click', () => {
         displayValue.textContent = `${"-"}${displayValue.textContent}`;
         plusMinus.disabled = true;
     }
+    if (num1.includes("-") || num2.includes("-")){
+        plusMinus.disabled = true;
+    }
             if (displayValue.textContent == num1){
                 num1 = `${"-"}${num1}`;
                 plusMinus.disabled = true;
