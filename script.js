@@ -717,7 +717,7 @@ point.addEventListener('click', () => {
         num1 = num1;
     }
 
-    if (!num2.includes(".") && num2Check === true) {
+    if (num2 && !num2.includes(".") && num2Check === true) {
         num2 += ".";
         displayValue.textContent += ".";
     } else {
