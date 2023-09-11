@@ -813,10 +813,15 @@ point.addEventListener('click', () => {
         displayValue.textContent += ".";
         console.log ("I added . to num1 because it doesn't have one")
     }
-    else if (num2Check && operatorCheck && operateCheck){
+    else if (num2Check && operatorCheck && operateCheck && clearDisplay){
         num2 = "0."
         displayValue.textContent = "0.";
     }
+    else if (num2Check && operatorCheck && operateCheck){
+        num2 += ".";
+        displayValue.textContent += ".";
+    }
+   
     else if (num2Check && !operateCheck && !num2 && operatorCheck){
         num2 = "0."
         displayValue.textContent = "0.";
