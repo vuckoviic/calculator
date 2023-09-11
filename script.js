@@ -104,7 +104,8 @@ const number0 = document.getElementById('number0');
 
 number1.addEventListener('click', function () {
     switch (true) {
-        case displayValue.textContent === "0.":
+        case displayValue.textContent === "0."
+        && num2Check === false:
             num1 += "1";
             displayValue.textContent += "1";
             break;
@@ -154,7 +155,8 @@ number1.addEventListener('click', function () {
 
 number2.addEventListener('click', function() {
     switch (true) {
-        case displayValue.textContent === "0.":
+        case displayValue.textContent === "0."
+        && num2Check === false:
             num1 += "2";
             displayValue.textContent += "2";
             break;
@@ -203,7 +205,8 @@ number2.addEventListener('click', function() {
 
 number3.addEventListener('click', function() {
     switch (true) {
-        case displayValue.textContent === "0.":
+        case displayValue.textContent === "0."
+            && num2Check === false:
             num1 += "3";
             displayValue.textContent += "3";
             break;
@@ -251,7 +254,8 @@ number3.addEventListener('click', function() {
 });
 number4.addEventListener('click', function() {
     switch (true) {
-        case displayValue.textContent === "0.":
+        case displayValue.textContent === "0."
+        && num2Check === false:
             num1 += "4";
             displayValue.textContent += "4";
             break;
@@ -300,7 +304,8 @@ number4.addEventListener('click', function() {
 });
 number5.addEventListener('click', function() {
     switch (true) {
-        case displayValue.textContent === "0.":
+        case displayValue.textContent === "0."
+        && num2Check === false:
             num1 += "5";
             displayValue.textContent += "5";
             break;
@@ -349,7 +354,8 @@ number5.addEventListener('click', function() {
 });
 number6.addEventListener('click', function() {
     switch (true) {
-        case displayValue.textContent === "0.":
+        case displayValue.textContent === "0."
+        && num2Check === false:
             num1 += "6";
             displayValue.textContent += "6";
             break;
@@ -398,7 +404,8 @@ number6.addEventListener('click', function() {
 });
 number7.addEventListener('click', function() {
     switch (true) {
-        case displayValue.textContent === "0.":
+        case displayValue.textContent === "0."
+        && num2Check === false:
             num1 += "7";
             displayValue.textContent += "7";
             break;
@@ -447,7 +454,8 @@ number7.addEventListener('click', function() {
 });
 number8.addEventListener('click', function() {
     switch (true) {
-        case displayValue.textContent === "0.":
+        case displayValue.textContent === "0."
+        && num2Check === false:
             num1 += "8";
             displayValue.textContent += "8";
             break;
@@ -495,7 +503,8 @@ number8.addEventListener('click', function() {
 });
 number9.addEventListener('click', function() {
     switch (true) {
-        case displayValue.textContent === "0.":
+        case displayValue.textContent === "0."
+        && num2Check === false:
             num1 += "9";
             displayValue.textContent += "1";
             break;
@@ -544,7 +553,8 @@ number9.addEventListener('click', function() {
 });
 number0.addEventListener('click', function() {
     switch (true) {
-        case displayValue.textContent === "0.":
+        case displayValue.textContent === "0."
+        && num2Check === false:
             num1 += "0";
             displayValue.textContent += "0";
             break;
@@ -592,6 +602,19 @@ number0.addEventListener('click', function() {
     }
 });
 
+
+const keypadButtons = document.querySelectorAll('button');
+keypadButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      console.log(`KEYPRESS: ${btn.textContent}`)
+      console.log(`num1 is: ${num1}`);
+      console.log(`num2 is: ${num2}`);
+      console.log(`num2Check is: ${num2Check}`)
+      console.log(`operatorCheck is: ${operatorCheck}`)
+      console.log(`operateCheck is: ${operateCheck}`)
+      
+    })
+});
 
 const plus = document.getElementById('plus');
 const minus = document.getElementById('minus');
@@ -697,12 +720,24 @@ remainderr.addEventListener('click', () => {
 });
 
 point.addEventListener('click', () => {
-    if (displayValue.textContent === "0") {
-        if (num1 !== "0.") { // Check if num1 is not already "0."
+    if (num2 === "0" && num2Check === true) {
+            num2 += ".";
+            displayValue.textContent += ".";
+        num2 = num2; // Not necessary
+    }
+    else if (displayValue.textContent === "0."){
+        num1 = num1;
+        num2 = num2;
+    }
+    
+    if (num1 === "0" && num2Check === false) {
             num1 += ".";
             displayValue.textContent += ".";
-        }
         num2 = num2; // Not necessary
+    }
+    else if (displayValue.textContent === "0."){
+        num1 = num1;
+        num2 = num2;
     }
 
     if (operateCheck === true && num2Check === false) {
