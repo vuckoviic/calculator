@@ -808,63 +808,22 @@ point.addEventListener('click', () => {
     }
 
 
-    if (num2 && !num2.includes(".") && num2Check === true){
+    if (num2 && !num2.includes(".") && num2Check === true && operateCheck === false){
         num2 += ".";
         displayValue.textContent += ".";
         console.log ("I added . to num1 because it doesn't have one")
     }
-    else if (num2Check && operateCheck === true && !num2){
+    else if (num2Check && operatorCheck && operateCheck){
         num2 = "0."
         displayValue.textContent = "0.";
     }
-    else if (num2Check && !operateCheck && !num2){
+    else if (num2Check && !operateCheck && !num2 && operatorCheck){
         num2 = "0."
         displayValue.textContent = "0.";
     }
     else {
         num2 = num2;
     }
-
-    
-    
-    // if (num2 === "0" && num2Check === true) {
-    //         num2 += ".";
-    //         displayValue.textContent += ".";
-    //     num2 = num2; // Not necessary
-    // }
-    // else if (displayValue.textContent === "0."){
-    //     num1 = num1;
-    //     num2 = num2;
-    // }
-    
-    // if (num1 === "0" && num2Check === false) {
-    //         num1 += ".";
-    //         displayValue.textContent += ".";
-    //     num2 = num2; // Not necessary
-    // }
-    // else if (displayValue.textContent === "0."){
-    //     num1 = num1;
-    //     num2 = num2;
-    // }
-
-    // if (operateCheck === true && num2Check === false) {
-    //     result = "";
-    //     num1 = "0.";
-    //     displayValue.textContent = "0.";
-    //     clearDisplay = true;
-    // } else if (!num1.includes(".") && num2Check === false) {
-    //     num1 += ".";
-    //     displayValue.textContent += ".";
-    // } else {
-    //     num1 = num1;
-    // }
-
-    // if (num2 && !num2.includes(".") && num2Check === true) {
-    //     num2 += ".";
-    //     displayValue.textContent += ".";
-    // } else {
-    //     num2 = num2;
-    // }
 });
 
 equals.addEventListener('click', function() {
