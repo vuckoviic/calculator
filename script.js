@@ -710,28 +710,27 @@ plusMinus.disabled = false;
 plusMinus.addEventListener('click', () => {
     plusMinus.disabled = false;
 
-    if (displayValue.textContent !== "0"){
-        displayValue.textContent = `${"-"}${displayValue.textContent}`;
-        plusMinus.disabled = true;
+    if (!num1.includes("-")){
+        num1 = `-${num1}`;
+        displayValue.textContent = `${num1}`;
+        console.log('I added - to num1 because it does not have one')
     }
-    if (num1.includes("-") || num2.includes("-")){
-        plusMinus.disabled = true;
+    else {
+        num1 = num1.slice(1);
+        displayValue.textContent = displayValue.textContent.slice(1);
+        console.log(num1.includes("-"))
     }
-            if (displayValue.textContent == num1){
-                num1 = `${"-"}${num1}`;
-                plusMinus.disabled = true;
-            }
-            else if (displayValue.textContent === "" || displayValue.textContent === "0"){
-                num1 = num1;
-                num2 = num2;
-            }
+    if (num2 && !num2.includes("-") && num2Check === true){
+        num2 = `-${num2}`;
+        displayValue.textContent = `${num2}`;
+        console.log('I added - to num1 because it does not have one')
+        console.log(`Num2 after added minus is: ${num2}`)
+    }
+    else if (num2 && !num2Check && num2.includes("-")){
+        num2 = num2.slice(1);
+        displayValue.textContent = displayValue.textContent.slice(1); 
+    }
 
-            else{
-                num2 = `${"-"}${num2}`;
-                plusMinus.disabled = true;
-            }
-            console.log(plusMinus.disabled);
-            operatorCheck = false;
 });
 
 let operatorCheck = false;
@@ -744,6 +743,13 @@ plus.addEventListener('click', () => {
     plusMinus.disabled = false;
     clearDisplay = true;
     operatorCheck = true;
+//in progress
+    // if (num1 && num2 && operatorCheck){
+    //     console.log(`num1: ${num1}`);
+    //     console.log(`num2: ${num2}`);
+    //     console.log(`operatorCheck: ${operatorCheck}`)
+    //     operate();
+    // }
 });
 
 minus.addEventListener('click', () => {
