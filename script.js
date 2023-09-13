@@ -36,7 +36,6 @@ const operate = function(num1, operator, num2) {
     num2Check = false;
     plusMinus.disabled = false;
 
-
     let num1Num;
     let num2Num;
     
@@ -710,12 +709,17 @@ plusMinus.disabled = false;
 plusMinus.addEventListener('click', () => {
     plusMinus.disabled = false;
 
-    if (!num1.includes("-")){
+    if (operateCheck === true){
+        num1 = result.toString();
+    }
+
+    if (num1 && !num1.includes("-") && !num2Check){
         num1 = `-${num1}`;
         displayValue.textContent = `${num1}`;
         console.log('I added - to num1 because it does not have one')
+        console.log(`Num1 after added minus is: ${num1}`)
     }
-    else {
+    else if (num1.includes("-") && !num2Check){
         num1 = num1.slice(1);
         displayValue.textContent = displayValue.textContent.slice(1);
         console.log(num1.includes("-"))
@@ -723,7 +727,7 @@ plusMinus.addEventListener('click', () => {
     if (num2 && !num2.includes("-") && num2Check === true){
         num2 = `-${num2}`;
         displayValue.textContent = `${num2}`;
-        console.log('I added - to num1 because it does not have one')
+        console.log('I added - to num2 because it does not have one')
         console.log(`Num2 after added minus is: ${num2}`)
     }
     else if (num2 && !num2Check && num2.includes("-")){
