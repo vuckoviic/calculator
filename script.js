@@ -709,20 +709,28 @@ plusMinus.disabled = false;
 plusMinus.addEventListener('click', () => {
     plusMinus.disabled = false;
 
-    if (operateCheck === true){
-        num1 = result.toString();
-    }
+    
 
     if (num1 && !num1.includes("-") && !num2Check){
+        
+        if (operateCheck === true){ //ovde nastaje problem
+        num1 = result.toString();
+        console.log(`Num1 after operate is: ${num1}`);
+        }
+
+        console.log(`Num1 includes minus: ${num1.includes("-")}`)
         num1 = `-${num1}`;
         displayValue.textContent = `${num1}`;
         console.log('I added - to num1 because it does not have one')
+        
         console.log(`Num1 after added minus is: ${num1}`)
     }
     else if (num1.includes("-") && !num2Check){
+        console.log(`Num1 includes minus: ${num1.includes("-")}`)
         num1 = num1.slice(1);
+        console.log(`I sliced one minus from num1`)
         displayValue.textContent = displayValue.textContent.slice(1);
-        console.log(num1.includes("-"))
+        
     }
     if (num2 && !num2.includes("-") && num2Check === true){
         num2 = `-${num2}`;
@@ -730,11 +738,11 @@ plusMinus.addEventListener('click', () => {
         console.log('I added - to num2 because it does not have one')
         console.log(`Num2 after added minus is: ${num2}`)
     }
-    else if (num2 && !num2Check && num2.includes("-")){
+    else if (num2 && num2Check && num2.includes("-")){
         num2 = num2.slice(1);
         displayValue.textContent = displayValue.textContent.slice(1); 
     }
-
+    operatorCheck = false;
 });
 
 let operatorCheck = false;
