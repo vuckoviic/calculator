@@ -754,13 +754,19 @@ plus.addEventListener('click', () => {
 });
 
 minus.addEventListener('click', () => {
-    num1 = displayValue.textContent;
-    operator = "-";
-    minus.classList.add('operator-clicked');
-    num2Check = true;
-    plusMinus.disabled = false;
-    clearDisplay = true;
-    operatorCheck = true;
+    if (num1 === "" || num1 === "0" || num1 === 0){
+        num1 = "-";
+        displayValue.textContent = num1;
+    }
+    else {
+        num1 = displayValue.textContent;
+        operator = "-";
+        minus.classList.add('operator-clicked');
+        num2Check = true;
+        plusMinus.disabled = false;
+        clearDisplay = true;
+        operatorCheck = true;
+    }
 });
 
 x.addEventListener('click', () => {
