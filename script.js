@@ -26,6 +26,11 @@ let operateCheck = false;
 
 const operate = function(num1, operator, num2) {
 
+    if (num1 && !num2) {
+        result = num1;
+        return result;
+    }
+
     if (displayValue.textContent === "0" && num2Check === false){
         num1 = "0";
     }
