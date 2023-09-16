@@ -737,6 +737,14 @@ function toggleSign(number) {
 let operatorCheck = false;
 
 plus.addEventListener('click', () => {
+    if (num1 && num2 && operatorCheck && !operateCheck){
+        num1 = num1;
+        num2 = num2;
+        console.log(num1, num2, operatorCheck, operateCheck) 
+        operate(num1, operator, num2);
+        //num1 becomes num2 (num1 = num2)
+    }
+    else {
     num1 = displayValue.textContent;
     operator = "+";
     plus.classList.add('operator-clicked');
@@ -744,16 +752,18 @@ plus.addEventListener('click', () => {
     plusMinus.disabled = false;
     clearDisplay = true;
     operatorCheck = true;
-//in progress
-    // if (num1 && num2 && operatorCheck){
-    //     console.log(`num1: ${num1}`);
-    //     console.log(`num2: ${num2}`);
-    //     console.log(`operatorCheck: ${operatorCheck}`)
-    //     operate();
-    // }
+    }
 });
 
 minus.addEventListener('click', () => {
+    if (num1 && num2 && operatorCheck && !operateCheck){
+        num1 = num1;
+        num2 = num2;
+        console.log(num1, num2, operatorCheck, operateCheck) 
+        operate(num1, operator, num2);
+        //num1 becomes num2 (num1 = num2)
+    }
+    else {
     if (num1 === "" || num1 === "0" || num1 === 0){
         num1 = "-";
         displayValue.textContent = num1;
@@ -766,6 +776,9 @@ minus.addEventListener('click', () => {
         plusMinus.disabled = false;
         clearDisplay = true;
         operatorCheck = true;
+    }
+    console.log(`Num1 is now: ${num1}`);
+        console.log(`Num2 is now: ${num2}`);
     }
 });
 
