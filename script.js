@@ -86,7 +86,8 @@ const operate = function(num1, operator, num2) {
     console.log(result);
     displayValue.textContent = result.toFixed(2);
     operateCheck = true;
-    operatorCheck = false;
+    num2 = "";
+    console.log(`Num2 after operate() is: ${num2}`)
     return result;
 };
 
@@ -138,25 +139,32 @@ number1.addEventListener('click', function () {
             break;
 
         case num2Check === false:
-            operateCheck = false; 
-            num1 = displayValue.textContent;
+            operateCheck = false;         
             if (displayValue.textContent === "0" || clearDisplay === true) {
                 num1 = "1";
-                displayValue.textContent = "1";
+                displayValue.textContent = num1;
                 clearDisplay = false;
-            } else {
+            } else if ((!displayValue.textContent === "0" || !clearDisplay) && !operatorCheck){
                 num1 += "1";
-                displayValue.textContent += "1";
+                displayValue.textContent = num1;
             }
             console.log(num1);
             break;
         
+        case num2Check === true && operateCheck === true && operatorCheck === true:
+            operateCheck = false;    
+            num1 = result.toString();
+            num2 = "";
+            num2 += "1"
+            displayValue.textContent = num2;
+            break;
+
         case num2Check === true && operatorCheck === true:
-            num2 +=  "2";
-            displayValue.textContent += "1";
+            num2 +=  "1";
+            displayValue.textContent = num2;
             console.log(num2);
             break;
-        
+
         default:
             // Handle other cases if needed
             break;
@@ -173,7 +181,7 @@ number2.addEventListener('click', function() {
 
         case displayValue.textContent === "0."
         && num2Check === true:
-            num2 +=  "2";
+            num2 += "2";
             displayValue.textContent += "2";
             break;
 
@@ -193,27 +201,34 @@ number2.addEventListener('click', function() {
             clearDisplay = false;
             console.log(num2);
             break;
-        
+
         case num2Check === false:
-            operateCheck = false; 
-            num1 = displayValue.textContent;
+            operateCheck = false;         
             if (displayValue.textContent === "0" || clearDisplay === true) {
                 num1 = "2";
-                displayValue.textContent = "2";
+                displayValue.textContent = num1;
                 clearDisplay = false;
-            } else {
+            } else if ((!displayValue.textContent === "0" || !clearDisplay) && !operatorCheck){
                 num1 += "2";
-                displayValue.textContent += "2";
+                displayValue.textContent = num1;
             }
             console.log(num1);
             break;
         
+        case num2Check === true && operateCheck === true && operatorCheck === true:
+            operateCheck = false;    
+            num1 = result.toString();
+            num2 = "";
+            num2 += "2"
+            displayValue.textContent = num2;
+            break;
+
         case num2Check === true && operatorCheck === true:
-            num2 += "2";
-            displayValue.textContent += "2";
+            num2 +=  "2";
+            displayValue.textContent = num2;
             console.log(num2);
             break;
-        
+
         default:
             // Handle other cases if needed
             break;
@@ -223,23 +238,23 @@ number2.addEventListener('click', function() {
 number3.addEventListener('click', function() {
     switch (true) {
         case displayValue.textContent === "0."
-            && num2Check === false:
+        && num2Check === false:
             num1 += "3";
             displayValue.textContent += "3";
             break;
 
-            case displayValue.textContent === "0."
-            && num2Check === true:
-                num2 +=  "3";
-                displayValue.textContent += "3";
-                break;
+        case displayValue.textContent === "0."
+        && num2Check === true:
+            num2 += "3";
+            displayValue.textContent += "3";
+            break;
 
         case operateCheck === true && operatorCheck === false:
             operateCheck = false;
             result = 0; // Restart the result
             num1 = "3";
             num2 = ""; // Set num2 to 0
-            displayValue.textContent = "3";
+            displayValue.textContent = "1";
             clearDisplay = false;
             console.log(num1);
             break;
@@ -250,27 +265,34 @@ number3.addEventListener('click', function() {
             clearDisplay = false;
             console.log(num2);
             break;
-        
+
         case num2Check === false:
-            operateCheck = false; 
-            num1 = displayValue.textContent;
+            operateCheck = false;         
             if (displayValue.textContent === "0" || clearDisplay === true) {
                 num1 = "3";
-                displayValue.textContent = "3";
+                displayValue.textContent = num1;
                 clearDisplay = false;
-            } else {
+            } else if ((!displayValue.textContent === "0" || !clearDisplay) && !operatorCheck){
                 num1 += "3";
-                displayValue.textContent += "3";
+                displayValue.textContent = num1;
             }
             console.log(num1);
             break;
         
+        case num2Check === true && operateCheck === true && operatorCheck === true:
+            operateCheck = false;    
+            num1 = result.toString();
+            num2 = "";
+            num2 += "3"
+            displayValue.textContent = num2;
+            break;
+
         case num2Check === true && operatorCheck === true:
-            num2 += "3";
-            displayValue.textContent += "3";
+            num2 +=  "3";
+            displayValue.textContent = num2;
             console.log(num2);
             break;
-        
+
         default:
             // Handle other cases if needed
             break;
@@ -284,13 +306,11 @@ number4.addEventListener('click', function() {
             displayValue.textContent += "4";
             break;
 
-            case displayValue.textContent === "0."
-            && num2Check === true:
-                num2 +=  "4";
-                displayValue.textContent += "4";
-                break;
-
-
+        case displayValue.textContent === "0."
+        && num2Check === true:
+            num2 += "4";
+            displayValue.textContent += "4";
+            break;
 
         case operateCheck === true && operatorCheck === false:
             operateCheck = false;
@@ -308,27 +328,34 @@ number4.addEventListener('click', function() {
             clearDisplay = false;
             console.log(num2);
             break;
-        
+
         case num2Check === false:
-            operateCheck = false; 
-            num1 = displayValue.textContent;
+            operateCheck = false;         
             if (displayValue.textContent === "0" || clearDisplay === true) {
                 num1 = "4";
-                displayValue.textContent = "4";
+                displayValue.textContent = num1;
                 clearDisplay = false;
-            } else {
+            } else if ((!displayValue.textContent === "0" || !clearDisplay) && !operatorCheck){
                 num1 += "4";
-                displayValue.textContent += "4";
+                displayValue.textContent = num1;
             }
             console.log(num1);
             break;
         
+        case num2Check === true && operateCheck === true && operatorCheck === true:
+            operateCheck = false;    
+            num1 = result.toString();
+            num2 = "";
+            num2 += "4"
+            displayValue.textContent = num2;
+            break;
+
         case num2Check === true && operatorCheck === true:
-            num2 += "4";
-            displayValue.textContent += "4";
+            num2 +=  "4";
+            displayValue.textContent = num2;
             console.log(num2);
             break;
-        
+
         default:
             // Handle other cases if needed
             break;
@@ -342,11 +369,11 @@ number5.addEventListener('click', function() {
             displayValue.textContent += "5";
             break;
 
-            case displayValue.textContent === "0."
-            && num2Check === true:
-                num2 +=  "5";
-                displayValue.textContent += "5";
-                break;
+        case displayValue.textContent === "0."
+        && num2Check === true:
+            num2 += "5";
+            displayValue.textContent += "5";
+            break;
 
         case operateCheck === true && operatorCheck === false:
             operateCheck = false;
@@ -364,27 +391,34 @@ number5.addEventListener('click', function() {
             clearDisplay = false;
             console.log(num2);
             break;
-        
+
         case num2Check === false:
-            operateCheck = false; 
-            num1 = displayValue.textContent;
+            operateCheck = false;         
             if (displayValue.textContent === "0" || clearDisplay === true) {
                 num1 = "5";
-                displayValue.textContent = "5";
+                displayValue.textContent = num1;
                 clearDisplay = false;
-            } else {
+            } else if ((!displayValue.textContent === "0" || !clearDisplay) && !operatorCheck){
                 num1 += "5";
-                displayValue.textContent += "5";
+                displayValue.textContent = num1;
             }
             console.log(num1);
             break;
         
-        case num2Check === true && operatorCheck === true:
+        case num2Check === true && operateCheck === true && operatorCheck === true:
+            operateCheck = false;    
+            num1 = result.toString();
+            num2 = "";
             num2 += "5";
-            displayValue.textContent += "5";
+            displayValue.textContent = num2;
+            break;
+
+        case num2Check === true && operatorCheck === true:
+            num2 +=  "5";
+            displayValue.textContent = num2;
             console.log(num2);
             break;
-        
+
         default:
             // Handle other cases if needed
             break;
@@ -398,11 +432,11 @@ number6.addEventListener('click', function() {
             displayValue.textContent += "6";
             break;
 
-            case displayValue.textContent === "0."
-            && num2Check === true:
-                num2 +=  "6";
-                displayValue.textContent += "6";
-                break;
+        case displayValue.textContent === "0."
+        && num2Check === true:
+            num2 += "6";
+            displayValue.textContent += "6";
+            break;
 
         case operateCheck === true && operatorCheck === false:
             operateCheck = false;
@@ -420,27 +454,34 @@ number6.addEventListener('click', function() {
             clearDisplay = false;
             console.log(num2);
             break;
-        
+
         case num2Check === false:
-            operateCheck = false; 
-            num1 = displayValue.textContent;
+            operateCheck = false;         
             if (displayValue.textContent === "0" || clearDisplay === true) {
                 num1 = "6";
-                displayValue.textContent = "6";
+                displayValue.textContent = num1;
                 clearDisplay = false;
-            } else {
+            } else if ((!displayValue.textContent === "0" || !clearDisplay) && !operatorCheck){
                 num1 += "6";
-                displayValue.textContent += "6";
+                displayValue.textContent = num1;
             }
             console.log(num1);
             break;
         
-        case num2Check === true && operatorCheck === true:
+        case num2Check === true && operateCheck === true && operatorCheck === true:
+            operateCheck = false;    
+            num1 = result.toString();
+            num2 = "";
             num2 += "6";
-            displayValue.textContent += "6";
+            displayValue.textContent = num2;
+            break;
+
+        case num2Check === true && operatorCheck === true:
+            num2 +=  "6";
+            displayValue.textContent = num2;
             console.log(num2);
             break;
-        
+
         default:
             // Handle other cases if needed
             break;
@@ -454,11 +495,11 @@ number7.addEventListener('click', function() {
             displayValue.textContent += "7";
             break;
 
-            case displayValue.textContent === "0."
-            && num2Check === true:
-                num2 +=  "7";
-                displayValue.textContent += "7";
-                break;
+        case displayValue.textContent === "0."
+        && num2Check === true:
+            num2 += "7";
+            displayValue.textContent += "7";
+            break;
 
         case operateCheck === true && operatorCheck === false:
             operateCheck = false;
@@ -476,27 +517,34 @@ number7.addEventListener('click', function() {
             clearDisplay = false;
             console.log(num2);
             break;
-        
+
         case num2Check === false:
-            operateCheck = false; 
-            num1 = displayValue.textContent;
+            operateCheck = false;         
             if (displayValue.textContent === "0" || clearDisplay === true) {
                 num1 = "7";
-                displayValue.textContent = "7";
+                displayValue.textContent = num1;
                 clearDisplay = false;
-            } else {
+            } else if ((!displayValue.textContent === "0" || !clearDisplay) && !operatorCheck){
                 num1 += "7";
-                displayValue.textContent += "7";
+                displayValue.textContent = num1;
             }
             console.log(num1);
             break;
         
+        case num2Check === true && operateCheck === true && operatorCheck === true:
+            operateCheck = false;    
+            num1 = result.toString();
+            num2 = "";
+            num2 += "7"
+            displayValue.textContent = num2;
+            break;
+
         case num2Check === true && operatorCheck === true:
-            num2 += "7";
-            displayValue.textContent += "7";
+            num2 +=  "7";
+            displayValue.textContent = num2;
             console.log(num2);
             break;
-        
+
         default:
             // Handle other cases if needed
             break;
@@ -510,11 +558,11 @@ number8.addEventListener('click', function() {
             displayValue.textContent += "8";
             break;
 
-            case displayValue.textContent === "0."
-            && num2Check === true:
-                num2 +=  "8";
-                displayValue.textContent += "8";
-                break;
+        case displayValue.textContent === "0."
+        && num2Check === true:
+            num2 += "8";
+            displayValue.textContent += "8";
+            break;
 
         case operateCheck === true && operatorCheck === false:
             operateCheck = false;
@@ -532,27 +580,34 @@ number8.addEventListener('click', function() {
             clearDisplay = false;
             console.log(num2);
             break;
-        
+
         case num2Check === false:
-            operateCheck = false; 
-            num1 = displayValue.textContent;
+            operateCheck = false;         
             if (displayValue.textContent === "0" || clearDisplay === true) {
                 num1 = "8";
-                displayValue.textContent = "8";
+                displayValue.textContent = num1;
                 clearDisplay = false;
-            } else {
+            } else if ((!displayValue.textContent === "0" || !clearDisplay) && !operatorCheck){
                 num1 += "8";
-                displayValue.textContent += "8";
+                displayValue.textContent = num1;
             }
             console.log(num1);
             break;
         
+        case num2Check === true && operateCheck === true && operatorCheck === true:
+            operateCheck = false;    
+            num1 = result.toString();
+            num2 = "";
+            num2 += "8"
+            displayValue.textContent = num2;
+            break;
+
         case num2Check === true && operatorCheck === true:
-            num2 += "8";
-            displayValue.textContent += "8";
+            num2 +=  "8";
+            displayValue.textContent = num2;
             console.log(num2);
             break;
-        
+
         default:
             // Handle other cases if needed
             break;
@@ -566,12 +621,11 @@ number9.addEventListener('click', function() {
             displayValue.textContent += "9";
             break;
 
-            case displayValue.textContent === "0."
-            && num2Check === true:
-                num2 +=  "9";
-                displayValue.textContent += "1";
-                break;
-
+        case displayValue.textContent === "0."
+        && num2Check === true:
+            num2 += "9";
+            displayValue.textContent += "9";
+            break;
 
         case operateCheck === true && operatorCheck === false:
             operateCheck = false;
@@ -589,27 +643,34 @@ number9.addEventListener('click', function() {
             clearDisplay = false;
             console.log(num2);
             break;
-        
+
         case num2Check === false:
-            operateCheck = false; 
-            num1 = displayValue.textContent;
+            operateCheck = false;         
             if (displayValue.textContent === "0" || clearDisplay === true) {
                 num1 = "9";
-                displayValue.textContent = "9";
+                displayValue.textContent = num1;
                 clearDisplay = false;
-            } else {
+            } else if ((!displayValue.textContent === "0" || !clearDisplay) && !operatorCheck){
                 num1 += "9";
-                displayValue.textContent += "9";
+                displayValue.textContent = num1;
             }
             console.log(num1);
             break;
         
+        case num2Check === true && operateCheck === true && operatorCheck === true:
+            operateCheck = false;    
+            num1 = result.toString();
+            num2 = "";
+            num2 += "9"
+            displayValue.textContent = num2;
+            break;
+
         case num2Check === true && operatorCheck === true:
-            num2 += "9";
-            displayValue.textContent += "9";
+            num2 +=  "9";
+            displayValue.textContent = num2;
             console.log(num2);
             break;
-        
+
         default:
             // Handle other cases if needed
             break;
@@ -623,12 +684,11 @@ number0.addEventListener('click', function() {
             displayValue.textContent += "0";
             break;
 
-            case displayValue.textContent === "0."
-            && num2Check === true:
-                num2 +=  "0";
-                displayValue.textContent += "0";
-                break;
-
+        case displayValue.textContent === "0."
+        && num2Check === true:
+            num2 += "0";
+            displayValue.textContent += "0";
+            break;
 
         case operateCheck === true && operatorCheck === false:
             operateCheck = false;
@@ -646,27 +706,34 @@ number0.addEventListener('click', function() {
             clearDisplay = false;
             console.log(num2);
             break;
-        
+
         case num2Check === false:
-            operateCheck = false; 
-            num1 = displayValue.textContent;
+            operateCheck = false;         
             if (displayValue.textContent === "0" || clearDisplay === true) {
                 num1 = "0";
-                displayValue.textContent = "0";
+                displayValue.textContent = num1;
                 clearDisplay = false;
-            } else {
+            } else if ((!displayValue.textContent === "0" || !clearDisplay) && !operatorCheck){
                 num1 += "0";
-                displayValue.textContent += "0";
+                displayValue.textContent = num1;
             }
             console.log(num1);
             break;
         
+        case num2Check === true && operateCheck === true && operatorCheck === true:
+            operateCheck = false;    
+            num1 = result.toString();
+            num2 = "";
+            num2 += "0"
+            displayValue.textContent = num2;
+            break;
+
         case num2Check === true && operatorCheck === true:
-            num2 += "0";
-            displayValue.textContent += "0";
+            num2 +=  "0";
+            displayValue.textContent = num2;
             console.log(num2);
             break;
-        
+
         default:
             // Handle other cases if needed
             break;
@@ -702,6 +769,7 @@ let clearDisplay = false;
 AC.addEventListener('click', () => {
     num2Check = false;
     operateCheck = false;
+    operatorCheck = false;
     num1 = "";
     num2 = "";
     operator = "";
@@ -738,11 +806,22 @@ let operatorCheck = false;
 
 plus.addEventListener('click', () => {
     if (num1 && num2 && operatorCheck && !operateCheck){
+        operateCheck = false;
         num1 = num1;
         num2 = num2;
         console.log(num1, num2, operatorCheck, operateCheck) 
         operate(num1, operator, num2);
-        //num1 becomes num2 (num1 = num2)
+        operateCheck = true;
+        num2Check = true;
+        num2 = "";
+    }
+    else if (operateCheck && operatorCheck && num2Check){
+        num1 = result.toString();
+        operator = "+";
+        num2 = num2;
+        operate(num1, operator, num2);
+        num2 = "";
+        num2Check = true;
     }
     else {
     num1 = displayValue.textContent;
@@ -757,59 +836,122 @@ plus.addEventListener('click', () => {
 
 minus.addEventListener('click', () => {
     if (num1 && num2 && operatorCheck && !operateCheck){
+        operateCheck = false;
         num1 = num1;
         num2 = num2;
         console.log(num1, num2, operatorCheck, operateCheck) 
         operate(num1, operator, num2);
-        //num1 becomes num2 (num1 = num2)
-    }
-    else {
-    if (num1 === "" || num1 === "0" || num1 === 0){
-        num1 = "-";
-        displayValue.textContent = num1;
-    }
-    else {
-        num1 = displayValue.textContent;
-        operator = "-";
-        minus.classList.add('operator-clicked');
+        operateCheck = true;
         num2Check = true;
-        plusMinus.disabled = false;
-        clearDisplay = true;
-        operatorCheck = true;
+        num2 = "";
     }
-    console.log(`Num1 is now: ${num1}`);
-        console.log(`Num2 is now: ${num2}`);
+    else if (operateCheck && operatorCheck && num2Check){
+        num1 = result.toString();
+        operator = "-";
+        num2 = num2;
+        operate(num1, operator, num2);
+        num2 = "";
+        num2Check = true;
+    }
+    else {
+    num1 = displayValue.textContent;
+    operator = "-";
+    plus.classList.add('operator-clicked');
+    num2Check = true;
+    plusMinus.disabled = false;
+    clearDisplay = true;
+    operatorCheck = true;
     }
 });
 
 x.addEventListener('click', () => {
+    if (num1 && num2 && operatorCheck && !operateCheck){
+        operateCheck = false;
+        num1 = num1;
+        num2 = num2;
+        console.log(num1, num2, operatorCheck, operateCheck) 
+        operate(num1, operator, num2);
+        operateCheck = true;
+        num2Check = true;
+        num2 = "";
+    }
+    else if (operateCheck && operatorCheck && num2Check){
+        num1 = result.toString();
+        operator = "*";
+        num2 = num2;
+        operate(num1, operator, num2);
+        num2 = "";
+        num2Check = true;
+    }
+    else {
     num1 = displayValue.textContent;
-    operator = "x";
-    x.classList.add('operator-clicked');
+    operator = "*";
+    plus.classList.add('operator-clicked');
     num2Check = true;
     plusMinus.disabled = false;
     clearDisplay = true;
     operatorCheck = true;
+    }
 });
 
 divider.addEventListener('click', () => {
+    if (num1 && num2 && operatorCheck && !operateCheck){
+        operateCheck = false;
+        num1 = num1;
+        num2 = num2;
+        console.log(num1, num2, operatorCheck, operateCheck) 
+        operate(num1, operator, num2);
+        operateCheck = true;
+        num2Check = true;
+        num2 = "";
+    }
+    else if (operateCheck && operatorCheck && num2Check){
+        num1 = result.toString();
+        operator = "/";
+        num2 = num2;
+        operate(num1, operator, num2);
+        num2 = "";
+        num2Check = true;
+    }
+    else {
     num1 = displayValue.textContent;
     operator = "/";
-    divider.classList.add('operator-clicked');
+    plus.classList.add('operator-clicked');
     num2Check = true;
     plusMinus.disabled = false;
     clearDisplay = true;
     operatorCheck = true;
+    }
 });
 
 remainderr.addEventListener('click', () => {
+    if (num1 && num2 && operatorCheck && !operateCheck){
+        operateCheck = false;
+        num1 = num1;
+        num2 = num2;
+        console.log(num1, num2, operatorCheck, operateCheck) 
+        operate(num1, operator, num2);
+        operateCheck = true;
+        num2Check = true;
+        num2 = "";
+    }
+    else if (operateCheck && operatorCheck && num2Check){
+        num1 = result.toString();
+        operator = "%";
+        num2 = num2;
+        operate(num1, operator, num2);
+        num2 = "";
+        num2Check = true;
+    }
+    else {
     num1 = displayValue.textContent;
     operator = "%";
-    remainderr.classList.add('operator-clicked');
+    plus.classList.add('operator-clicked');
     num2Check = true;
     plusMinus.disabled = false;
     clearDisplay = true;
     operatorCheck = true;
+    }
 });
 
 point.addEventListener('click', () => {
@@ -859,4 +1001,5 @@ point.addEventListener('click', () => {
 
 equals.addEventListener('click', function() {
     operate(num1, operator, num2);
+    operatorCheck = false;
 });
