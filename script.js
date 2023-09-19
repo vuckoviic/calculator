@@ -1007,7 +1007,7 @@ x.addEventListener('click', () => {
         num2 = num2;
         console.log(num1, num2, operatorCheck, operateCheck) 
         operate(num1, operator, num2);
-        operator = "*";
+        operator = "x";
         operateCheck = true;
         num2Check = true;
         num2 = "";
@@ -1017,13 +1017,13 @@ x.addEventListener('click', () => {
         x.classList.add('operator-clicked');
         num2 = num2;
         operate(num1, operator, num2);
-        operator = "*";
+        operator = "x";
         num2 = "";
         num2Check = true;
     }
     else {
     num1 = displayValue.textContent;
-    operator = "*";
+    operator = "x";
     x.classList.add('operator-clicked');
     num2Check = true;
     plusMinus.disabled = false;
