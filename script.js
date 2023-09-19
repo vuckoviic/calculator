@@ -63,7 +63,6 @@ const operate = function(num1, operator, num2) {
     console.log(num1Num);
     console.log(num2Num);
     
-
     if (operator === "+") {
         result = add(num1Num, num2Num);
     } else if (operator === "-") {
@@ -811,6 +810,7 @@ plus.addEventListener('click', () => {
         num2 = num2;
         console.log(num1, num2, operatorCheck, operateCheck) 
         operate(num1, operator, num2);
+        operator = "+";
         operateCheck = true;
         num2Check = true;
         num2 = "";
@@ -820,6 +820,7 @@ plus.addEventListener('click', () => {
         operator = "+";
         num2 = num2;
         operate(num1, operator, num2);
+        operator = "+";
         num2 = "";
         num2Check = true;
     }
@@ -841,17 +842,19 @@ minus.addEventListener('click', () => {
         num2 = num2;
         console.log(num1, num2, operatorCheck, operateCheck) 
         operate(num1, operator, num2);
+        operator = "-";
         operateCheck = true;
         num2Check = true;
         num2 = "";
     }
     else if (operateCheck && operatorCheck && num2Check){
         num1 = result.toString();
-        operator = "-";
         num2 = num2;
         operate(num1, operator, num2);
+        operator = "-";
         num2 = "";
         num2Check = true;
+        operator = "-";
     }
     else {
     num1 = displayValue.textContent;
@@ -871,15 +874,16 @@ x.addEventListener('click', () => {
         num2 = num2;
         console.log(num1, num2, operatorCheck, operateCheck) 
         operate(num1, operator, num2);
+        operator = "*";
         operateCheck = true;
         num2Check = true;
         num2 = "";
     }
     else if (operateCheck && operatorCheck && num2Check){
         num1 = result.toString();
-        operator = "*";
         num2 = num2;
         operate(num1, operator, num2);
+        operator = "*";
         num2 = "";
         num2Check = true;
     }
@@ -901,15 +905,16 @@ divider.addEventListener('click', () => {
         num2 = num2;
         console.log(num1, num2, operatorCheck, operateCheck) 
         operate(num1, operator, num2);
+        operator = "/";
         operateCheck = true;
         num2Check = true;
         num2 = "";
     }
     else if (operateCheck && operatorCheck && num2Check){
         num1 = result.toString();
-        operator = "/";
         num2 = num2;
         operate(num1, operator, num2);
+        operator = "/";
         num2 = "";
         num2Check = true;
     }
@@ -931,15 +936,16 @@ remainderr.addEventListener('click', () => {
         num2 = num2;
         console.log(num1, num2, operatorCheck, operateCheck) 
         operate(num1, operator, num2);
+        operator = "%";
         operateCheck = true;
         num2Check = true;
         num2 = "";
     }
     else if (operateCheck && operatorCheck && num2Check){
         num1 = result.toString();
-        operator = "%";
         num2 = num2;
         operate(num1, operator, num2);
+        operator = "%";
         num2 = "";
         num2Check = true;
     }
