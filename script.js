@@ -859,7 +859,7 @@ minus.addEventListener('click', () => {
     else {
     num1 = displayValue.textContent;
     operator = "-";
-    plus.classList.add('operator-clicked');
+    minus.classList.add('operator-clicked');
     num2Check = true;
     plusMinus.disabled = false;
     clearDisplay = true;
@@ -890,7 +890,7 @@ x.addEventListener('click', () => {
     else {
     num1 = displayValue.textContent;
     operator = "*";
-    plus.classList.add('operator-clicked');
+    x.classList.add('operator-clicked');
     num2Check = true;
     plusMinus.disabled = false;
     clearDisplay = true;
@@ -921,7 +921,7 @@ divider.addEventListener('click', () => {
     else {
     num1 = displayValue.textContent;
     operator = "/";
-    plus.classList.add('operator-clicked');
+    divider.classList.add('operator-clicked');
     num2Check = true;
     plusMinus.disabled = false;
     clearDisplay = true;
@@ -952,7 +952,7 @@ remainderr.addEventListener('click', () => {
     else {
     num1 = displayValue.textContent;
     operator = "%";
-    plus.classList.add('operator-clicked');
+    remainderr.classList.add('operator-clicked');
     num2Check = true;
     plusMinus.disabled = false;
     clearDisplay = true;
