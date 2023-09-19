@@ -13,7 +13,7 @@ body{
     align-items: center;
     height: 450px;
     width: 300px;
-    background-color: rgb(119, 67, 0);
+    background-color: black;
 }
 
 .display{
@@ -22,16 +22,15 @@ body{
     width: 260px;
     border: 1px solid black;
     margin-top: 15px;
-    border: 3px solid rgb(255, 118, 68);
     justify-content: flex-end;
     align-items: flex-end;
 }
 
 .display p{
-    font-size: 30px;
+    font-size: 40px;
     margin: 0;
     padding: 5px;
-    color: rgb(254, 255, 169);
+    color: rgb(255, 255, 255);
     font-weight: bold;
 }
 
@@ -58,10 +57,13 @@ button{
     color: rgb(254, 255, 169);
 }
 
-#equals{
+#number0{
     display: flex;
+    height: 60px;
     width: 130px;
-    border-radius: 25px;
+    border-radius: 30px;
+    justify-content: flex-start;
+    padding: 15px;
 }
 
 #zero-point-equals{
@@ -72,10 +74,41 @@ button{
 }
 
 .operation{
-    background-color: rgb(254, 255, 169);
-    color: rgb(255, 118, 68);
+    background-color: rgb(255, 172, 18);
+    color: rgb(255, 255, 255);
+}
+
+.gray-operation{
+    display: flex;
+    background-color: rgb(167, 167, 167);
+    color: black;
+}
+
+.gray-operation-clicked{
+    display: flex;
+    background-color: rgb(221, 221, 221);
+    color: rgb(0, 0, 0);
+    transition: 0.1s;
+}
+
+.number{
+    background-color: rgb(56, 56, 56);
+    color: white;
 }
 
 .operator-clicked{
     display: flex;
+    background-color: white;
+    color:rgb(255, 118, 68);
+    transition: 0.5s;
+}
+
+.number-clicked{
+    background-color: rgb(179, 179, 179);
+}
+
+.equals-clicked{
+    background-color:rgb(255, 255, 255) ;
+    color: rgb(255, 172, 18);
+    transition: 0.2s;
 }

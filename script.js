@@ -106,6 +106,11 @@ const number8 = document.getElementById('number8');
 const number9 = document.getElementById('number9');
 const number0 = document.getElementById('number0');
 
+// numberButtons.addEventListener('click', function (e) {
+//     e.classList.add('number-clicked');
+//     e.classList.remove('number-clicked');
+// })
+
 number1.addEventListener('click', function () {
     switch (true) {
         case displayValue.textContent === "0."
@@ -866,16 +871,15 @@ const point = document.getElementById('point');
 let clearDisplay = false;
 
 AC.addEventListener('click', () => {
+    AC.classList.add('gray-operation-clicked');
     num2Check = false;
     operateCheck = false;
     operatorCheck = false;
-
     plus.classList.remove('operator-clicked');
     minus.classList.remove('operator-clicked');
     x.classList.remove('operator-clicked');
     divider.classList.remove('operator-clicked');
     remainderr.classList.remove('operator-clicked');
-
     num1 = "";
     num2 = "";
     operator = "";
@@ -895,7 +899,8 @@ if (num2Check === true){
 plusMinus.disabled = false;
 
 plusMinus.addEventListener('click', () => {
-    if (num1 && !num2Check) {
+    plusMinus.classList.add('gray-operation-clicked');
+        if (num1 && !num2Check) {
         if (operateCheck) {
             num1 = result.toString();
             operateCheck = false; // Reset operateCheck
@@ -1061,9 +1066,9 @@ divider.addEventListener('click', () => {
 });
 
 remainderr.addEventListener('click', () => {
+    remainderr.classList.add('gray-operation-clicked');
     if (num1 && num2 && operatorCheck && !operateCheck){
         operateCheck = false;
-        remainderr.classList.add('operator-clicked');
         num1 = num1;
         num2 = num2;
         console.log(num1, num2, operatorCheck, operateCheck) 
@@ -1075,7 +1080,6 @@ remainderr.addEventListener('click', () => {
     }
     else if (operateCheck && operatorCheck && num2Check){
         num1 = result.toString();
-        remainderr.classList.add('operator-clicked');
         num2 = num2;
         operate(num1, operator, num2);
         operator = "%";
@@ -1085,7 +1089,6 @@ remainderr.addEventListener('click', () => {
     else {
     num1 = displayValue.textContent;
     operator = "%";
-    remainderr.classList.add('operator-clicked');
     num2Check = true;
     plusMinus.disabled = false;
     clearDisplay = true;
@@ -1141,6 +1144,7 @@ point.addEventListener('click', () => {
 equals.addEventListener('click', function() {
     operate(num1, operator, num2);
     operatorCheck = false;
+    equals.classList.add('equals-clicked');
     plus.classList.remove('operator-clicked');
     minus.classList.remove('operator-clicked');
     x.classList.remove('operator-clicked');
