@@ -135,6 +135,11 @@ number1.addEventListener('click', function () {
             displayValue.textContent = "1";
             clearDisplay = false;
             console.log(num2);
+            plus.classList.remove('operator-clicked');
+            minus.classList.remove('operator-clicked');
+            x.classList.remove('operator-clicked');
+            divider.classList.remove('operator-clicked');
+            remainderr.classList.remove('operator-clicked');
             break;
 
         case num2Check === false:
@@ -197,6 +202,11 @@ number2.addEventListener('click', function() {
         case num2Check === true && clearDisplay === true:
             num2 = "2";
             displayValue.textContent = "2";
+            plus.classList.remove('operator-clicked');
+    minus.classList.remove('operator-clicked');
+    x.classList.remove('operator-clicked');
+    divider.classList.remove('operator-clicked');
+    remainderr.classList.remove('operator-clicked');
             clearDisplay = false;
             console.log(num2);
             break;
@@ -260,6 +270,11 @@ number3.addEventListener('click', function() {
         
         case num2Check === true && clearDisplay === true:
             num2 = "3";
+            plus.classList.remove('operator-clicked');
+    minus.classList.remove('operator-clicked');
+    x.classList.remove('operator-clicked');
+    divider.classList.remove('operator-clicked');
+    remainderr.classList.remove('operator-clicked');
             displayValue.textContent = "3";
             clearDisplay = false;
             console.log(num2);
@@ -323,6 +338,11 @@ number4.addEventListener('click', function() {
         
         case num2Check === true && clearDisplay === true:
             num2 = "4";
+            plus.classList.remove('operator-clicked');
+    minus.classList.remove('operator-clicked');
+    x.classList.remove('operator-clicked');
+    divider.classList.remove('operator-clicked');
+    remainderr.classList.remove('operator-clicked');
             displayValue.textContent = "4";
             clearDisplay = false;
             console.log(num2);
@@ -386,6 +406,11 @@ number5.addEventListener('click', function() {
         
         case num2Check === true && clearDisplay === true:
             num2 = "5";
+            plus.classList.remove('operator-clicked');
+    minus.classList.remove('operator-clicked');
+    x.classList.remove('operator-clicked');
+    divider.classList.remove('operator-clicked');
+    remainderr.classList.remove('operator-clicked');
             displayValue.textContent = "5";
             clearDisplay = false;
             console.log(num2);
@@ -449,6 +474,11 @@ number6.addEventListener('click', function() {
         
         case num2Check === true && clearDisplay === true:
             num2 = "6";
+            plus.classList.remove('operator-clicked');
+    minus.classList.remove('operator-clicked');
+    x.classList.remove('operator-clicked');
+    divider.classList.remove('operator-clicked');
+    remainderr.classList.remove('operator-clicked');
             displayValue.textContent = "6";
             clearDisplay = false;
             console.log(num2);
@@ -512,6 +542,11 @@ number7.addEventListener('click', function() {
         
         case num2Check === true && clearDisplay === true:
             num2 = "7";
+            plus.classList.remove('operator-clicked');
+    minus.classList.remove('operator-clicked');
+    x.classList.remove('operator-clicked');
+    divider.classList.remove('operator-clicked');
+    remainderr.classList.remove('operator-clicked');
             displayValue.textContent = "7";
             clearDisplay = false;
             console.log(num2);
@@ -575,6 +610,11 @@ number8.addEventListener('click', function() {
         
         case num2Check === true && clearDisplay === true:
             num2 = "8";
+            plus.classList.remove('operator-clicked');
+    minus.classList.remove('operator-clicked');
+    x.classList.remove('operator-clicked');
+    divider.classList.remove('operator-clicked');
+    remainderr.classList.remove('operator-clicked');
             displayValue.textContent = "8";
             clearDisplay = false;
             console.log(num2);
@@ -638,6 +678,11 @@ number9.addEventListener('click', function() {
         
         case num2Check === true && clearDisplay === true:
             num2 = "9";
+            plus.classList.remove('operator-clicked');
+    minus.classList.remove('operator-clicked');
+    x.classList.remove('operator-clicked');
+    divider.classList.remove('operator-clicked');
+    remainderr.classList.remove('operator-clicked');
             displayValue.textContent = "9";
             clearDisplay = false;
             console.log(num2);
@@ -701,6 +746,11 @@ number0.addEventListener('click', function() {
         
         case num2Check === true && clearDisplay === true:
             num2 = "0";
+            plus.classList.remove('operator-clicked');
+    minus.classList.remove('operator-clicked');
+    x.classList.remove('operator-clicked');
+    divider.classList.remove('operator-clicked');
+    remainderr.classList.remove('operator-clicked');
             displayValue.textContent = "0";
             clearDisplay = false;
             console.log(num2);
@@ -769,12 +819,28 @@ AC.addEventListener('click', () => {
     num2Check = false;
     operateCheck = false;
     operatorCheck = false;
+
+    plus.classList.remove('operator-clicked');
+    minus.classList.remove('operator-clicked');
+    x.classList.remove('operator-clicked');
+    divider.classList.remove('operator-clicked');
+    remainderr.classList.remove('operator-clicked');
+
     num1 = "";
     num2 = "";
     operator = "";
     displayValue.textContent = "0";
     plusMinus.disabled = false;
 });
+
+if (num2Check === true){
+    plus.classList.remove('operator-clicked');
+    minus.classList.remove('operator-clicked');
+    x.classList.remove('operator-clicked');
+    divider.classList.remove('operator-clicked');
+    remainderr.classList.remove('operator-clicked');
+}
+
 
 plusMinus.disabled = false;
 
@@ -802,6 +868,12 @@ function toggleSign(number) {
 
 
 let operatorCheck = false;
+
+plus.classList.remove('operator-clicked');
+minus.classList.remove('operator-clicked');
+x.classList.remove('operator-clicked');
+divider.classList.remove('operator-clicked');
+remainderr.classList.remove('operator-clicked');
 
 plus.addEventListener('click', () => {
     if (num1 && num2 && operatorCheck && !operateCheck){
@@ -1008,4 +1080,9 @@ point.addEventListener('click', () => {
 equals.addEventListener('click', function() {
     operate(num1, operator, num2);
     operatorCheck = false;
+    plus.classList.remove('operator-clicked');
+    minus.classList.remove('operator-clicked');
+    x.classList.remove('operator-clicked');
+    divider.classList.remove('operator-clicked');
+    remainderr.classList.remove('operator-clicked');
 });
