@@ -160,6 +160,11 @@ number1.addEventListener('click', function () {
             num1 = result.toString();
             num2 = "";
             num2 += "1"
+            plus.classList.remove('operator-clicked');
+            minus.classList.remove('operator-clicked');
+            x.classList.remove('operator-clicked');
+            divider.classList.remove('operator-clicked');
+            remainderr.classList.remove('operator-clicked');
             displayValue.textContent = num2;
             break;
 
@@ -228,6 +233,11 @@ number2.addEventListener('click', function() {
             operateCheck = false;    
             num1 = result.toString();
             num2 = "";
+            plus.classList.remove('operator-clicked');
+            minus.classList.remove('operator-clicked');
+            x.classList.remove('operator-clicked');
+            divider.classList.remove('operator-clicked');
+            remainderr.classList.remove('operator-clicked');
             num2 += "2"
             displayValue.textContent = num2;
             break;
@@ -297,6 +307,11 @@ number3.addEventListener('click', function() {
             operateCheck = false;    
             num1 = result.toString();
             num2 = "";
+            plus.classList.remove('operator-clicked');
+            minus.classList.remove('operator-clicked');
+            x.classList.remove('operator-clicked');
+            divider.classList.remove('operator-clicked');
+            remainderr.classList.remove('operator-clicked');
             num2 += "3"
             displayValue.textContent = num2;
             break;
@@ -365,6 +380,11 @@ number4.addEventListener('click', function() {
             operateCheck = false;    
             num1 = result.toString();
             num2 = "";
+            plus.classList.remove('operator-clicked');
+            minus.classList.remove('operator-clicked');
+            x.classList.remove('operator-clicked');
+            divider.classList.remove('operator-clicked');
+            remainderr.classList.remove('operator-clicked');
             num2 += "4"
             displayValue.textContent = num2;
             break;
@@ -433,6 +453,11 @@ number5.addEventListener('click', function() {
             operateCheck = false;    
             num1 = result.toString();
             num2 = "";
+            plus.classList.remove('operator-clicked');
+            minus.classList.remove('operator-clicked');
+            x.classList.remove('operator-clicked');
+            divider.classList.remove('operator-clicked');
+            remainderr.classList.remove('operator-clicked');
             num2 += "5";
             displayValue.textContent = num2;
             break;
@@ -501,6 +526,11 @@ number6.addEventListener('click', function() {
             operateCheck = false;    
             num1 = result.toString();
             num2 = "";
+            plus.classList.remove('operator-clicked');
+            minus.classList.remove('operator-clicked');
+            x.classList.remove('operator-clicked');
+            divider.classList.remove('operator-clicked');
+            remainderr.classList.remove('operator-clicked');
             num2 += "6";
             displayValue.textContent = num2;
             break;
@@ -569,6 +599,11 @@ number7.addEventListener('click', function() {
             operateCheck = false;    
             num1 = result.toString();
             num2 = "";
+            plus.classList.remove('operator-clicked');
+            minus.classList.remove('operator-clicked');
+            x.classList.remove('operator-clicked');
+            divider.classList.remove('operator-clicked');
+            remainderr.classList.remove('operator-clicked');
             num2 += "7"
             displayValue.textContent = num2;
             break;
@@ -637,6 +672,11 @@ number8.addEventListener('click', function() {
             operateCheck = false;    
             num1 = result.toString();
             num2 = "";
+            plus.classList.remove('operator-clicked');
+            minus.classList.remove('operator-clicked');
+            x.classList.remove('operator-clicked');
+            divider.classList.remove('operator-clicked');
+            remainderr.classList.remove('operator-clicked');
             num2 += "8"
             displayValue.textContent = num2;
             break;
@@ -705,6 +745,11 @@ number9.addEventListener('click', function() {
             operateCheck = false;    
             num1 = result.toString();
             num2 = "";
+            plus.classList.remove('operator-clicked');
+            minus.classList.remove('operator-clicked');
+            x.classList.remove('operator-clicked');
+            divider.classList.remove('operator-clicked');
+            remainderr.classList.remove('operator-clicked');
             num2 += "9"
             displayValue.textContent = num2;
             break;
@@ -738,6 +783,11 @@ number0.addEventListener('click', function() {
             operateCheck = false;
             result = 0; // Restart the result
             num1 = "0";
+            plus.classList.remove('operator-clicked');
+            minus.classList.remove('operator-clicked');
+            x.classList.remove('operator-clicked');
+            divider.classList.remove('operator-clicked');
+            remainderr.classList.remove('operator-clicked');
             num2 = ""; // Set num2 to 0
             displayValue.textContent = "0";
             clearDisplay = false;
@@ -878,6 +928,7 @@ remainderr.classList.remove('operator-clicked');
 plus.addEventListener('click', () => {
     if (num1 && num2 && operatorCheck && !operateCheck){
         operateCheck = false;
+        plus.classList.add('operator-clicked');
         num1 = num1;
         num2 = num2;
         console.log(num1, num2, operatorCheck, operateCheck) 
@@ -890,6 +941,8 @@ plus.addEventListener('click', () => {
     else if (operateCheck && operatorCheck && num2Check){
         num1 = result.toString();
         operator = "+";
+        plus.classList.add('operator-clicked');
+
         num2 = num2;
         operate(num1, operator, num2);
         operator = "+";
@@ -910,6 +963,7 @@ plus.addEventListener('click', () => {
 minus.addEventListener('click', () => {
     if (num1 && num2 && operatorCheck && !operateCheck){
         operateCheck = false;
+        minus.classList.add('operator-clicked');
         num1 = num1;
         num2 = num2;
         console.log(num1, num2, operatorCheck, operateCheck) 
@@ -921,6 +975,7 @@ minus.addEventListener('click', () => {
     }
     else if (operateCheck && operatorCheck && num2Check){
         num1 = result.toString();
+        minus.classList.add('operator-clicked');
         num2 = num2;
         operate(num1, operator, num2);
         operator = "-";
@@ -942,6 +997,7 @@ minus.addEventListener('click', () => {
 x.addEventListener('click', () => {
     if (num1 && num2 && operatorCheck && !operateCheck){
         operateCheck = false;
+        x.classList.add('operator-clicked');
         num1 = num1;
         num2 = num2;
         console.log(num1, num2, operatorCheck, operateCheck) 
@@ -953,6 +1009,7 @@ x.addEventListener('click', () => {
     }
     else if (operateCheck && operatorCheck && num2Check){
         num1 = result.toString();
+        x.classList.add('operator-clicked');
         num2 = num2;
         operate(num1, operator, num2);
         operator = "*";
@@ -973,6 +1030,7 @@ x.addEventListener('click', () => {
 divider.addEventListener('click', () => {
     if (num1 && num2 && operatorCheck && !operateCheck){
         operateCheck = false;
+        divider.classList.add('operator-clicked');
         num1 = num1;
         num2 = num2;
         console.log(num1, num2, operatorCheck, operateCheck) 
@@ -984,6 +1042,7 @@ divider.addEventListener('click', () => {
     }
     else if (operateCheck && operatorCheck && num2Check){
         num1 = result.toString();
+        divider.classList.add('operator-clicked');
         num2 = num2;
         operate(num1, operator, num2);
         operator = "/";
@@ -1004,6 +1063,7 @@ divider.addEventListener('click', () => {
 remainderr.addEventListener('click', () => {
     if (num1 && num2 && operatorCheck && !operateCheck){
         operateCheck = false;
+        remainderr.classList.add('operator-clicked');
         num1 = num1;
         num2 = num2;
         console.log(num1, num2, operatorCheck, operateCheck) 
@@ -1015,6 +1075,7 @@ remainderr.addEventListener('click', () => {
     }
     else if (operateCheck && operatorCheck && num2Check){
         num1 = result.toString();
+        remainderr.classList.add('operator-clicked');
         num2 = num2;
         operate(num1, operator, num2);
         operator = "%";
