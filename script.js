@@ -106,10 +106,14 @@ const number8 = document.getElementById('number8');
 const number9 = document.getElementById('number9');
 const number0 = document.getElementById('number0');
 
-// numberButtons.addEventListener('click', function (e) {
-//     e.classList.add('number-clicked');
-//     e.classList.remove('number-clicked');
-// })
+numberButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        button.classList.add('number-clicked');
+        setTimeout(function() {
+            button.classList.remove("number-clicked");
+        }, 100);
+    });
+});
 
 number1.addEventListener('click', function () {
     switch (true) {
@@ -872,6 +876,9 @@ let clearDisplay = false;
 
 AC.addEventListener('click', () => {
     AC.classList.add('gray-operation-clicked');
+        setTimeout(function() {
+            AC.classList.remove('gray-operation-clicked');
+    }, 100);
     num2Check = false;
     operateCheck = false;
     operatorCheck = false;
@@ -900,6 +907,9 @@ plusMinus.disabled = false;
 
 plusMinus.addEventListener('click', () => {
     plusMinus.classList.add('gray-operation-clicked');
+        setTimeout(function() {
+            plusMinus.classList.remove('gray-operation-clicked');
+    }, 100);
         if (num1 && !num2Check) {
         if (operateCheck) {
             num1 = result.toString();
@@ -1067,6 +1077,9 @@ divider.addEventListener('click', () => {
 
 remainderr.addEventListener('click', () => {
     remainderr.classList.add('gray-operation-clicked');
+        setTimeout(function() {
+            remainderr.classList.remove('gray-operation-clicked');
+    }, 100);
     if (num1 && num2 && operatorCheck && !operateCheck){
         operateCheck = false;
         num1 = num1;
@@ -1145,6 +1158,9 @@ equals.addEventListener('click', function() {
     operate(num1, operator, num2);
     operatorCheck = false;
     equals.classList.add('equals-clicked');
+    setTimeout(function() {
+        equals.classList.remove("equals-clicked");
+    }, 100);
     plus.classList.remove('operator-clicked');
     minus.classList.remove('operator-clicked');
     x.classList.remove('operator-clicked');
