@@ -4,23 +4,17 @@ body{
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: Helvetica, Arial, sans-serif;
-
 }
 
 .calculator-body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 950px;
+    height: 1024px;
     width: auto;
     position: relative;
     background-image: url(images/bg.png);
-}
-
-#bg-image{
-    height: 900px;
-    width: auto;
+    /* background-size: 1024px; */
 }
 
 .display{
