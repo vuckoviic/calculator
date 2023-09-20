@@ -4,49 +4,56 @@ body{
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: rgb(254, 255, 169);
+
 }
 
 .calculator-body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 450px;
-    width: 300px;
-    background-color: black;
+    height: 950px;
+    width: auto;
+    position: relative;
+    background-image: url(images/bg.png);
+}
+
+#bg-image{
+    height: 900px;
+    width: auto;
 }
 
 .display{
     display: flex;
     height: 120px;
-    width: 260px;
-    border: 1px solid black;
-    margin-top: 15px;
+    width: 490px;
+    margin-top: 237px;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .display p{
-    font-size: 40px;
+    font-size: 120px;
     margin: 0;
     padding: 5px;
+    margin-right: 60px;
+    padding-top: 40px;
     color: rgb(255, 255, 255);
-    font-weight: bold;
 }
 
 .buttons{
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    gap: 8px;
+    gap: 15px;
     flex-wrap: wrap;
     margin-top: 20px;
+    max-width: 490px;
 }
 
 button{
     display: flex;
-    height: 60px;
-    width: 60px;
+    height: 90px;
+    width: 90px;
     border-radius: 50%;
     justify-content: center;
     align-items: center;
@@ -59,9 +66,9 @@ button{
 
 #number0{
     display: flex;
-    height: 60px;
-    width: 130px;
-    border-radius: 30px;
+    height: 90px;
+    width: 195px;
+    border-radius: 50px;
     justify-content: flex-start;
     padding: 15px;
 }
@@ -69,7 +76,7 @@ button{
 #zero-point-equals{
     display: flex;
     justify-content: center;
-    gap: 8px;
+    gap: 15px;
     margin-bottom: 30px;
 }
 
@@ -92,7 +99,7 @@ button{
 }
 
 .number{
-    background-color: rgb(56, 56, 56);
+    background-color: rgb(56, 56, 56); /*rgb(56, 56, 56)*/
     color: white;
 }
 
