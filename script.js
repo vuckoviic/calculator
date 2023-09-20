@@ -83,7 +83,7 @@ const operate = function(num1, operator, num2) {
     }
 
     console.log(result);
-    displayValue.textContent = result.toFixed(2);
+    displayValue.textContent = result.toFixed(2).replace(".00", "");
     operateCheck = true;
     num2 = "";
     console.log(`Num2 after operate() is: ${num2}`)
