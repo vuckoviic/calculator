@@ -4,6 +4,7 @@ body{
     align-items: center;
     height: 100vh;
     margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
 
 }
 
@@ -60,8 +61,9 @@ button{
     font-weight: bold;
     background-color: rgb(255, 118, 68);
     border: 0px;
-    font-size: 26px;
+    font-size: 40px;
     color: rgb(254, 255, 169);
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 #number0{
