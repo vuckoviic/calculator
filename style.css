@@ -27,7 +27,7 @@ body{
 }
 
 .display p{
-    font-size: 120px;
+    font-size: 100px;
     margin: 0;
     padding: 5px;
     margin-right: 80px;
@@ -93,7 +93,7 @@ button{
 
 .gray-operation-clicked{
     display: flex;
-    background-color: rgb(221, 221, 221);
+    background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     transition: 0.1s;
 }
@@ -117,5 +117,5 @@ button{
 .equals-clicked{
     background-color:rgb(255, 255, 255) ;
     color: rgb(255, 172, 18);
-    transition: 0.2s;
+    transition: 0.1s;
 }
