@@ -1132,6 +1132,7 @@ point.addEventListener('click', () => {
     }
 
     if (displayValue.textContent === "0" && num2Check === false && operateCheck === false){
+        num1 = "0"
         num1 += "."
         displayValue.textContent = num1;
         console.log ("I added . to num1 because it doesn't have one")
