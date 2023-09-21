@@ -905,7 +905,11 @@ plusMinus.addEventListener('click', () => {
         setTimeout(function() {
             plusMinus.classList.remove('gray-operation-clicked');
     }, 100);
-    if (num1 && !num2Check) {
+    if (operateCheck && result.toString() === "0"){
+        plusMinus.disabled = true;
+    }
+    else if (num1 && !num2Check) {
+        plusMinus.disabled = false;
         if (operateCheck) {
             num1 = result.toString();
             operateCheck = false; // Reset operateCheck
@@ -913,10 +917,12 @@ plusMinus.addEventListener('click', () => {
         num1 = toggleSign(num1);
         displayValue.textContent = num1;
     } else if (num2 && num2Check) {
+        plusMinus.disabled = false;
         num2 = toggleSign(num2);
         displayValue.textContent = num2;
     }
     else if (num1 && operatorCheck){
+        plusMinus.disabled = false;
         num1 = toggleSign(num1);
         displayValue.textContent = num1;
     }
