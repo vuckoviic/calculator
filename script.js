@@ -905,7 +905,7 @@ plusMinus.addEventListener('click', () => {
         setTimeout(function() {
             plusMinus.classList.remove('gray-operation-clicked');
     }, 100);
-        if (num1 && !num2Check) {
+    if (num1 && !num2Check) {
         if (operateCheck) {
             num1 = result.toString();
             operateCheck = false; // Reset operateCheck
@@ -915,6 +915,10 @@ plusMinus.addEventListener('click', () => {
     } else if (num2 && num2Check) {
         num2 = toggleSign(num2);
         displayValue.textContent = num2;
+    }
+    else if (num1 && operatorCheck){
+        num1 = toggleSign(num1);
+        displayValue.textContent = num1;
     }
 });
 
