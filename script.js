@@ -296,7 +296,7 @@ number3.addEventListener('click', function() {
             result = 0; // Restart the result
             num1 = "3";
             num2 = ""; // Set num2 to 0
-            displayValue.textContent = "1";
+            displayValue.textContent = "3";
             clearDisplay = false;
             console.log(num1);
             break;
