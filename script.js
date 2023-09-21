@@ -1129,11 +1129,11 @@ point.addEventListener('click', () => {
 
     if (displayValue.textContent === "0" && num2Check === false && operateCheck === false){
         num1 += "."
-        displayValue.textContent += ".";
+        displayValue.textContent = num1;
         console.log ("I added . to num1 because it doesn't have one")
     }
 
-    if (!num1.includes(".")){
+    if (!num1.includes(".") && !num2Check){
         num1 += ".";
         console.log ("I added . to num1 because it doesn't have one")
         displayValue.textContent += ".";
@@ -1145,7 +1145,7 @@ point.addEventListener('click', () => {
 
     if (num2 && !num2.includes(".") && num2Check === true && operateCheck === false){
         num2 += ".";
-        displayValue.textContent += ".";
+        displayValue.textContent = num2;
         console.log ("I added . to num1 because it doesn't have one")
     }
     else if (num2Check && operatorCheck && operateCheck && clearDisplay){
