@@ -35,6 +35,11 @@ const operate = function(num1, operator, num2) {
         result = num1;
         return result;
     }
+    else if (num1 === 0 && !num2){
+        result = "ERROR";
+        displayValue.textContent = result;
+        return result;
+    }
 
     if (displayValue.textContent === "0" && num2Check === false){
         num1 = "0";
@@ -88,7 +93,13 @@ const operate = function(num1, operator, num2) {
     }
 
     console.log(result);
-    displayValue.textContent = result.toFixed(2).replace(".00", "");
+    if (result === "NaN"){
+        displayValue.textContent = "NaN";
+    }
+    else {
+        displayValue.textContent = result.toFixed(2).replace(".00", "");
+    }
+
     operateCheck = true;
     num2 = "";
     console.log(`Num2 after operate() is: ${num2}`)
