@@ -15,7 +15,12 @@ const divide = function(num1Num, num2Num){
 }
 
 const remainder = function(num1Num, num2Num){
-    return num1Num % num2Num;
+    if (!num2Check){
+        return num2Num / 100;
+    }
+    else {
+        return num1Num / 100;
+    }
 }
 
 let num1 = 0;
@@ -1080,33 +1085,34 @@ remainderr.addEventListener('click', () => {
         setTimeout(function() {
             remainderr.classList.remove('gray-operation-clicked');
     }, 100);
-    if (num1 && num2 && operatorCheck && !operateCheck){
-        operateCheck = false;
-        num1 = num1;
-        num2 = num2;
-        console.log(num1, num2, operatorCheck, operateCheck) 
-        operate(num1, operator, num2);
-        operator = "%";
-        operateCheck = true;
-        num2Check = true;
-        num2 = "";
-    }
-    else if (operateCheck && operatorCheck && num2Check){
-        num1 = result.toString();
-        num2 = num2;
-        operate(num1, operator, num2);
-        operator = "%";
-        num2 = "";
-        num2Check = true;
-    }
-    else {
-    num1 = displayValue.textContent;
-    operator = "%";
-    num2Check = true;
-    plusMinus.disabled = false;
-    clearDisplay = true;
-    operatorCheck = true;
-    }
+    operate(num1, operator, num2);
+    // if (num1 && num2 && operatorCheck && !operateCheck){
+    //     operateCheck = false;
+    //     num1 = num1;
+    //     num2 = num2;
+    //     console.log(num1, num2, operatorCheck, operateCheck) 
+    //     operate(num1, operator, num2);
+    //     operator = "%";
+    //     operateCheck = true;
+    //     num2Check = true;
+    //     num2 = "";
+    // }
+    // else if (operateCheck && operatorCheck && num2Check){
+    //     num1 = result.toString();
+    //     num2 = num2;
+    //     operate(num1, operator, num2);
+    //     operator = "%";
+    //     num2 = "";
+    //     num2Check = true;
+    // }
+    // else {
+    // num1 = displayValue.textContent;
+    // operator = "%";
+    // num2Check = true;
+    // plusMinus.disabled = false;
+    // clearDisplay = true;
+    // operatorCheck = true;
+    // }
 });
 
 point.addEventListener('click', () => {
