@@ -172,7 +172,6 @@ number1.addEventListener('click', function () {
         case num2Check === true && operateCheck === true && operatorCheck === true:
             operateCheck = false;    
             num1 = result.toString();
-            num2 = "";
             num2 += "1"
             plus.classList.remove('operator-clicked');
             minus.classList.remove('operator-clicked');
@@ -246,7 +245,6 @@ number2.addEventListener('click', function() {
         case num2Check === true && operateCheck === true && operatorCheck === true:
             operateCheck = false;    
             num1 = result.toString();
-            num2 = "";
             plus.classList.remove('operator-clicked');
             minus.classList.remove('operator-clicked');
             x.classList.remove('operator-clicked');
@@ -320,7 +318,6 @@ number3.addEventListener('click', function() {
         case num2Check === true && operateCheck === true && operatorCheck === true:
             operateCheck = false;    
             num1 = result.toString();
-            num2 = "";
             plus.classList.remove('operator-clicked');
             minus.classList.remove('operator-clicked');
             x.classList.remove('operator-clicked');
@@ -393,7 +390,6 @@ number4.addEventListener('click', function() {
         case num2Check === true && operateCheck === true && operatorCheck === true:
             operateCheck = false;    
             num1 = result.toString();
-            num2 = "";
             plus.classList.remove('operator-clicked');
             minus.classList.remove('operator-clicked');
             x.classList.remove('operator-clicked');
@@ -466,7 +462,6 @@ number5.addEventListener('click', function() {
         case num2Check === true && operateCheck === true && operatorCheck === true:
             operateCheck = false;    
             num1 = result.toString();
-            num2 = "";
             plus.classList.remove('operator-clicked');
             minus.classList.remove('operator-clicked');
             x.classList.remove('operator-clicked');
@@ -539,7 +534,6 @@ number6.addEventListener('click', function() {
         case num2Check === true && operateCheck === true && operatorCheck === true:
             operateCheck = false;    
             num1 = result.toString();
-            num2 = "";
             plus.classList.remove('operator-clicked');
             minus.classList.remove('operator-clicked');
             x.classList.remove('operator-clicked');
@@ -612,7 +606,6 @@ number7.addEventListener('click', function() {
         case num2Check === true && operateCheck === true && operatorCheck === true:
             operateCheck = false;    
             num1 = result.toString();
-            num2 = "";
             plus.classList.remove('operator-clicked');
             minus.classList.remove('operator-clicked');
             x.classList.remove('operator-clicked');
@@ -685,7 +678,6 @@ number8.addEventListener('click', function() {
         case num2Check === true && operateCheck === true && operatorCheck === true:
             operateCheck = false;    
             num1 = result.toString();
-            num2 = "";
             plus.classList.remove('operator-clicked');
             minus.classList.remove('operator-clicked');
             x.classList.remove('operator-clicked');
@@ -758,7 +750,6 @@ number9.addEventListener('click', function() {
         case num2Check === true && operateCheck === true && operatorCheck === true:
             operateCheck = false;    
             num1 = result.toString();
-            num2 = "";
             plus.classList.remove('operator-clicked');
             minus.classList.remove('operator-clicked');
             x.classList.remove('operator-clicked');
@@ -836,7 +827,6 @@ number0.addEventListener('click', function() {
         case num2Check === true && operateCheck === true && operatorCheck === true:
             operateCheck = false;    
             num1 = result.toString();
-            num2 = "";
             num2 += "0"
             displayValue.textContent = num2;
             break;
