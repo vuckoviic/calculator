@@ -1085,7 +1085,23 @@ remainderr.addEventListener('click', () => {
         setTimeout(function() {
             remainderr.classList.remove('gray-operation-clicked');
     }, 100);
-    operate(num1, operator, num2);
+    if (operateCheck && !num2Check){
+        num1 = result.toString();
+        console.log(`num1 after result: ${num1}`)
+        num1 = num1 / 100;
+        displayValue.textContent = num1
+    }
+    else if (!num2Check){
+        num1 = num1 / 100;
+        displayValue.textContent = num1;     
+    }
+    
+    else {
+        num2 = num2 / 100;
+        displayValue.textContent = num2;
+    }
+    operateCheck = true;
+    
     // if (num1 && num2 && operatorCheck && !operateCheck){
     //     operateCheck = false;
     //     num1 = num1;
